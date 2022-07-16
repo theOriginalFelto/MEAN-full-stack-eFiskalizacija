@@ -1,0 +1,75 @@
+<div class="prikaz" *ngIf="!imaRacuna">
+    <h2>Nema računa za prikaz</h2>
+</div>
+<div *ngIf="imaRacuna">
+    <div class="container" style="margin-bottom: 30px;">
+        <div class="row prikaz">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Prikaz dnevnog pazara</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h5>Za datum</h5>&nbsp;
+                <input type="date" name="datum" [(ngModel)]="datum" (ngModelChange)="izracunajPazar()">
+            </div>
+            <div class="col" *ngIf="pazarFlag">
+                <h5>Ukupan pazar: {{ukupanPazar}}RSD</h5>
+            </div>
+            <div class="col" *ngIf="pazarFlag && daLiJePDV">
+                <h5>Od toga PDV: {{ukupanPDV}}RSD</h5>
+            </div>
+        </div>
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="row prikaz">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Pregled svih računa</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="prikaz" style="margin-top: 40px;">
+                <table>
+                    <tr>
+                        <th>Datum</th>
+                        <th>Ukupan iznos</th>
+                        <th>Iznos PDV-a</th>
+                        <th>Izabrati račun?</th>
+                    </tr>
+                    <tr *ngFor="let rac of racuni">
+                        <td>{{rac.dan}}.{{rac.mesec}}.{{rac.godina}}.</td>
+                        <td>{{rac.ukupanIznos}} RSD</td>
+                        <td>{{rac.iznosPDV}} RSD</td>
+                        <td>
+                            <button (click)="izaberiRacun(rac)" style="border-radius: 10px">Izaberi</button>
+                        </td>  
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="row prikaz">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Pregled izabranog računa</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="prikaz" style="margin-top: 40px;">
+                <table>
+                    <tr>
+                        <th>Naziv artikla</th>
+                        <th>Cijena</th>
+                        <th>Količina</th>
+                        <th>Ukupna cijena</th>
+                    </tr>
+                    <tr *ngFor="let st of trenRacun.stavke">
+                        <td>{{st.artikal.naziv}}</td>
+                        <td>{{st.artikalUMagacinu.prodajnaCena}} RSD</td>
+                        <td>{{st.kolicina}}</td>
+                        <td>{{st.artikalUMagacinu.prodajnaCena*st.kolicina}} RSD</td>  
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

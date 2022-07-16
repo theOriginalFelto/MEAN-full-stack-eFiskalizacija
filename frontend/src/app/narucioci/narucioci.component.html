@@ -1,0 +1,164 @@
+<h2 class="prikaz">Registracija naručioca</h2>
+<p class="prikaz">Polja označena sa<span style="color: red">&nbsp;*&nbsp;</span>su obavezna.</p>
+<form  class="prikaz">
+    <table>
+        <tr>
+            <td>Ime odgovornog lica<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="ime" [(ngModel)]="ime" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Prezime odgovornog lica<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="prezime" [(ngModel)]="prezime" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Korisničko ime<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="korIme" [(ngModel)]="korIme" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Lozinka<span style="color: red">*</span></td>
+            <td>
+                <input type="password" name="lozinka" [(ngModel)]="lozinka" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Potvrda lozinke<span style="color: red">*</span></td>
+            <td>
+                <input type="password" name="potvrdaLozinke" [(ngModel)]="potvrdaLozinke" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Kontakt telefon<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="telefon" [(ngModel)]="telefon" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>E-mail adresa<span style="color: red">*</span></td>
+            <td>
+                <input type="email" name="email" [(ngModel)]="email" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Naziv preduzeća<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="naziv" [(ngModel)]="naziv" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Država<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="drzava" [(ngModel)]="drzava" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Grad<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="grad" [(ngModel)]="grad" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Poštanski broj<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="postanskiBroj" [(ngModel)]="postanskiBroj" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Ulica<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="ulica" [(ngModel)]="ulica" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Broj<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="broj" [(ngModel)]="broj" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Poreski identifikacioni broj (PIB)<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="PIB" [(ngModel)]="PIB" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Matični broj preduzeća<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="maticniBroj" [(ngModel)]="maticniBroj" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Grb (logo) preduzeća<span style="color: red">*</span></td>
+            <td>
+                <label for="logoId" class="labela">Izaberite svoj grb (logo) (PNG, JPG)</label>
+                <input type="file" name="logo" accept="image/png, image/jpeg" id="logoId" required>
+            </td>  
+            <script src="../assets/slike.js"></script>      
+        </tr>
+        <tr>
+            <td>Broj dana za plaćanje<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="brojDanaZaPlacanje" [(ngModel)]="brojDanaZaPlacanje" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Rabat (%)<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="rabat" [(ngModel)]="rabat" required>
+            </td>        
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="registracijaNarucioca()">Registruj naručioca</button>
+            </td>        
+        </tr>
+    </table>
+</form>
+
+<br/>
+<div *ngIf="!registracijaOK"  class="prikaz">
+    {{message}}<br/> 
+</div>
+<div *ngIf="registracijaOK"  class="prikaz" style="margin-bottom: 10px;">
+    Registracija naručioca uspješna!&nbsp; <br/>
+</div>
+<hr class="hro">
+<h2 class="prikaz">Registracija naručioca pomoću PIB-a</h2>
+<form  class="prikaz">
+    <table>
+        <tr>
+            <td>PIB</td>
+            <td>
+                <input type="text" name="narPIB" [(ngModel)]="narPIB" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Broj dana za plaćanje<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="brojDanaZaPlacanjePIB" [(ngModel)]="brojDanaZaPlacanjePIB" required>
+            </td>        
+        </tr>
+        <tr>
+            <td>Rabat (%)<span style="color: red">*</span></td>
+            <td>
+                <input type="text" name="rabatPIB" [(ngModel)]="rabatPIB" required>
+            </td>        
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button (click)="registracijaNaruciocaPib()">Registruj naručioca</button>
+            </td>        
+        </tr>
+    </table>
+</form>
+<div *ngIf="!PIBregistracijaOK"  class="prikaz">
+    {{PIBporuka}}&nbsp;<br/> 
+</div>
+<div *ngIf="PIBregistracijaOK"  class="prikaz" style="margin-bottom: 10px;">
+    Registracija naručioca uspješna!&nbsp; <br/>
+</div>

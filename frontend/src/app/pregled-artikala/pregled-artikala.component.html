@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+        <div class="col" style="margin-bottom: 10px;">
+            <h2>Sva preduzeća</h2>
+        </div>
+    </div>
+    <div class="prikaz" style="margin-top: 40px;">
+        <table>
+            <tr>
+                <th>Naziv preduzeća</th>
+                <th>Država</th>
+                <th>Grad</th>
+                <th>Ulica i broj</th>
+                <th>Izabrati?</th>
+            </tr>
+            <tr *ngFor="let pred of svaPreduzeca">
+                <td>{{pred.naziv}}</td>
+                <td>{{pred.drzava}}</td>
+                <td>{{pred.grad}}</td>
+                <td>{{pred.ulica}} {{pred.broj}}</td>
+                <td>
+                    <button (click)="izaberiPreduzece(pred)" style="border-radius: 10px">Izaberi</button>
+                </td>  
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="prikazArtikalaFlag">
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="row">
+            <div class="col">
+                <h2 style="margin-bottom: 30px;">Artikli preduzeća {{trenPreduzece.naziv}}</h2>
+            </div>
+        </div>
+        <div class="row prikaz">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Pretraga po nazivu artikla: </p>
+            </div>
+            <div class="col-5">
+                <input type="text" name="pretragaNaziv" [(ngModel)]="pretragaNaziv" (ngModelChange)="pretraga()">
+            </div>
+        </div>
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Naziv</th>
+                    <th>Proizvođač</th>
+                    <th>Izabrati artikal?</th>
+                </tr>
+                <tr *ngFor="let art of sviArtikliPreduzeca">
+                    <td>{{art.naziv}}</td>
+                    <td>{{art.proizvodjac}}</td>
+                    <td>
+                        <button (click)="izaberiArtikal(art)" style="border-radius: 10px">Izaberi</button>
+                    </td>      
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div *ngIf="prikazIzMagacinaFlag">
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Naziv magacina/objekta</th>
+                    <th>Prodajna cijena (RSD)</th>
+                </tr>
+                <tr *ngFor="let art of magacinArtikli" [class.minimalnaCijena]="minimalnaCijena(art)">
+                    <td>{{art.nazivMagacina}}</td>
+                    <td>{{art.prodajnaCena}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="prikaz">
+            <p>Zelenom bojom je označen magacin sa najmanjom cijenom artikla.</p>
+        </div>
+    </div>
+</div>

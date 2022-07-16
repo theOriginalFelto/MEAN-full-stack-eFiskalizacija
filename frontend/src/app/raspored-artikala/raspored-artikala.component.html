@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="row red">
+        <div class="col" style="margin-bottom: 10px;">
+            <h2>Kategorije artikala</h2>
+        </div>
+    </div>
+    <div class="row red" *ngFor="let kat of kategorijeArtikala; let i = index">
+        <div class="col">
+            <ul>
+                <li>
+                    <div class="dugme-pomjeraj"><h4>{{kat.naziv}}</h4>&nbsp;</div>
+                    <button (click)="dodajKategorijuArtiklu(kat)" class="dugme" *ngIf="kat.potkategorije.length==0">Dodaj artikal</button>
+                    <ul *ngFor="let potKat of kat.potkategorije" style="list-style: circle;">
+                        <li class="potkategorija">
+                            <h6>{{potKat.naziv}}</h6>&nbsp;
+                            <button (click)="dodajPotkategorijuArtiklu(kat, potKat.naziv)" class="dugme">Dodaj artikal</button>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="col">
+            <h6>Naziv potkategorije</h6>
+            <input type="text" name="nazivPotkategorije[{{i}}]" [(ngModel)]="nazivPotkategorije[i]" required>
+        </div>
+        <div class="col">
+            <div class="dugme-pomjeraj">
+                <button (click)="dodajPotkategoriju(kat, i)" class="dugme">Dodaj potkategoriju</button>
+            </div>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col">
+            <h2>Dodavanje kategorije</h2>
+        </div>       
+    </div>
+    <div class="row red">
+        <div class="col">
+            <h6>Naziv kategorije</h6>
+            <input type="text" name="nazivKategorije" [(ngModel)]="nazivKategorije" required>
+        </div>
+        <div class="col">
+            <div class="dugme-pomjeraj">
+                <button (click)="dodajKategoriju()" class="dugme">Dodaj kategoriju</button>
+            </div>
+        </div>        
+    </div>
+    <div class="row red" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" 
+    *ngIf="dodajKatPoruka!=''">
+        <p>{{dodajKatPoruka}}</p>
+    </div>
+</div>
+<div class="container" *ngIf="dodajArtikalFlag">
+    <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+    <div class="row prikaz">
+        <div class="col-auto">
+            <p style="margin-top: 7px;">Pretraga po nazivu artikla: </p>
+        </div>
+        <div class="col-5">
+            <input type="text" name="pretragaNaziv" [(ngModel)]="pretragaNaziv" (ngModelChange)="pretraga()">
+        </div>
+    </div>
+    <div class="prikaz" style="margin-top: 40px;">
+        <table>
+            <tr>
+                <th>Šifra</th>
+                <th>Naziv</th>
+                <th>Jedinica mjere</th>
+                <th>Stopa poreza</th>
+                <th>Proizvođač</th>
+                <th>Dodati artikal?</th>
+            </tr>
+            <tr *ngFor="let art of sviArtikli">
+                <td>{{art.sifra}}</td>
+                <td>{{art.naziv}}</td>
+                <td>{{art.jedinicaMere}}</td>
+                <td>{{art.stopaPoreza}}</td>
+                <td>{{art.proizvodjac}}</td>
+                <td>
+                    <button (click)="dodajKategorijuArtikluFinalno(art)" style="border-radius: 10px">Dodaj</button>
+                </td>      
+            </tr>
+        </table>
+    </div>
+    <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" 
+    *ngIf="finalnaPoruka!=''">
+        <p>{{finalnaPoruka}}</p>
+    </div>
+</div>

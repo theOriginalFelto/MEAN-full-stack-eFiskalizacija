@@ -1,0 +1,67 @@
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.lista{
+    list-style: none;
+    list-style-image: none;
+    margin-right: 40px;
+}
+
+.tabela{
+    border: 2px solid black;
+}
+
+.celija{
+    border: 2px solid black;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button{
+    background: none;
+    background-color: rgb(1, 97, 252);
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-family: "Montserrat",Arial,"Helvetica Neue",sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid rgb(1, 97, 252);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(1, 97, 252);
+}
+
+a:link, a:visited {
+    background-color: rgb(1, 97, 252);
+    color: white;
+    border: 1px solid rgb(1, 97, 252);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    font-weight: 600;
+    font-size: 16px;
+}
+  
+a:hover, a:active {
+    background-color: white;
+    color: rgb(1, 97, 252);
+}

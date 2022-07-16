@@ -1,0 +1,117 @@
+<div class="nav_part">
+    <ul class="nav_list" *ngIf="kategorija!=''">
+        <li class="nav_item">
+            <a class="nav_link" routerLink="/preduzece">Početna</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['podaci-o-preduzecu', id]">Podaci o preduzeću</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['narucioci', id]">Naručioci</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['robe-i-usluge', id]">Robe i usluge</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['raspored-artikala', id]">Raspored artikala</a>
+        </li>
+        <li class="nav_item" *ngIf="kategorija==='ugostitelj'">
+            <a class="nav_link" [routerLink]="['raspored-stolova', id]">Raspored stolova</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['izdavanje-racuna', id]">Izdavanje računa</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['pregled-izvestaja', id]">Pregled izvještaja</a>
+        </li>
+    </ul>
+    <button class="nav_button" (click)="logout()">Izloguj se</button>
+</div>
+<div class="myContainer" style="display: flex;">
+    <div>
+        <img id="profilnaSlika" src="" alt="Pregled">
+    </div>
+    <div class="myContainer">
+        <p>Dobro došli, {{ime}}, na profil svoje kompanije {{imeKompanije}}!</p>
+    </div>
+</div>
+<div class="myContainer" style="margin-bottom: 50px;">
+    <div class="row">
+        <div class="col" style="margin-bottom: 30px;">
+          <h2 class="prikaz">Promjena lozinke</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Stara lozinka&nbsp; <input type="password" name="staraLozinka" [(ngModel)]="staraLozinka">
+        </div>
+        <div class="col">
+            Nova lozinka&nbsp; <input type="password" name="novaLozinka" [(ngModel)]="novaLozinka">
+        </div>
+        <div class="col">
+            Potvrdi lozinku&nbsp; <input type="password" name="potvrdaLozinke" [(ngModel)]="potvrdaLozinke">
+        </div>
+        <div class="col">
+            <button (click)="promjenaLozinke()" style="margin-top: 10px;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%); border-radius: 10px;">Promijeni lozinku</button>
+        </div>
+    </div>
+    <div *ngIf="lozinkaPoruka != ''">
+        <p>{{lozinkaPoruka}}</p>
+    </div>
+    <div *ngIf="uspjehPromjenaLozinke">
+        <p>Promjena lozinke uspješna. Uskoro Vas prebacujemo na početni ekran za prijavljivanje.</p>
+    </div>
+</div><br/>
+<form *ngIf="kategorija===''">
+    <div class="myContainer">
+        <div class="row">
+            <div class="col">
+              <h2 style="margin-bottom: 15px;">Molimo unesite sljedeće podatke kako biste nastavili sa radom.</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h6>Kategorija preduzeća</h6>&nbsp;
+                <input type="radio" id="prodavnica" name="formKategorija" value="prodavnica" [(ngModel)]="formKategorija">
+                <label for="prodavnica">Prodavnica</label>&nbsp;
+                <input type="radio" id="ugostitelj" name="formKategorija" value="ugostitelj" [(ngModel)]="formKategorija">
+                <label for="ugostitelj">Ugostitelj</label>
+            </div>
+            <div class="col">
+                <h6>Šifra/e djelatnosti (odvojiti zapetom ako ih ima više)</h6>&nbsp;
+                <input type="text" name="formSifreDj" [(ngModel)]="formSifreDj">
+            </div>
+            <div class="col">
+                <h6>Da li ste u sistemu PDV?</h6>&nbsp;
+                <input type="checkbox" id="formIsPdv" name="formIsPdv" [(ngModel)]="formIsPdv">
+                <label for="Pdv"> Da</label>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px;">
+            <div class="col">
+                <h6>Žiro račun/i (odvojiti zapetom ako ih ima više)</h6>&nbsp;
+                <input type="text" name="formZiroRac" [(ngModel)]="formZiroRac">
+            </div>
+            <div class="col">
+                <h6>Broj kasa</h6>&nbsp;
+                <input type="text" name="formBrKasa" [(ngModel)]="formBrKasa">
+            </div>
+            <div class="col">
+                <h6>Broj magacina</h6>&nbsp;
+                <input type="text" name="formBrMag" [(ngModel)]="formBrMag">
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px; display: flex; justify-content: center;">
+            <button style="border-radius: 10px;" (click)="dodajPodatke()">Dodaj podatke</button>
+        </div>
+        <div class="row" style="margin-top: 20px; display: flex; justify-content: center;" *ngIf="podaciPoruka!=''">
+            <p>{{podaciPoruka}}</p>
+        </div>
+    </div>
+</form>
+
+<router-outlet></router-outlet>

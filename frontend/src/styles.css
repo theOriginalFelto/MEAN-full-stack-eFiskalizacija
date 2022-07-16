@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    display: inline;
+    background-color: rgb(111, 175, 254);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+}
+
+.myContainer{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=number], textarea, input[type=date] {
+    border: 2px solid rgb(1, 97, 252);
+    border-radius: 4px;
+    padding: 7px 12px;
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+select {
+    border: 2px solid rgb(1, 97, 252);
+    border-radius: 4px;
+    padding: 7px 12px;
+    width: 100%;
+}
+
+td{
+    height: 50px;
+    width: 280px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+button{
+    background: none;
+    background-color: rgb(1, 97, 252);
+    border: 0;
+    cursor: pointer;
+    outline: none;
+    color: white;
+    font-family: "Montserrat",Arial,"Helvetica Neue",sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    text-align: center;
+    padding: 5px 10px;
+    border: 1px solid rgb(1, 97, 252);
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(1, 97, 252);
+}
+
+button:disabled,
+button[disabled]{
+  border: 1px solid #454545;
+  background-color: #666666;
+}
+
+a:link, a:visited {
+    background-color: rgb(1, 97, 252);
+    color: white;
+    border: 2px solid rgb(1, 97, 252);
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+}
+  
+a:hover, a:active {
+    background-color: white;
+    color: rgb(1, 97, 252);
+    text-decoration: none;
+    padding: 5px 10px;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

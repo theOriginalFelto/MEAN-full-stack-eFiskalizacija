@@ -1,0 +1,98 @@
+<div class="myContainer" style="margin-bottom: 50px;">
+    <div class="row red">
+        <div class="col podaci">
+            <h2>Magacini<span *ngIf="magacini.length>0"> - ukupan broj: {{magacini.length}}</span></h2>
+        </div>
+    </div>
+    <div class="row red" *ngFor="let magacin of magacini">
+        <div class="col-3 podaci">
+            <p><b>Identifikator magacina:</b> {{magacin.id}}</p>
+        </div>
+        <div class="col-3 podaci">
+            <p><b>Naziv magacina:</b> {{magacin.naziv}}</p>
+        </div>
+        <div class="col-3">
+            <button (click)="brisiMagacin(magacin)" class="dug">Obriši magacin</button>
+        </div>
+    </div>
+    <div class="row red" *ngIf="magacini.length==0">
+        <div class="col-auto podaci">
+            <p><b>Nema magacina za prikaz.</b></p>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-auto podaci">
+            <h4>Dodavanje magacina</h4>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-auto podaci">
+            <p><b>Identifikator magacina</b></p>
+        </div>
+        <div class="col-2">
+            <input type="text" name="idMag" [(ngModel)]="idMag">
+        </div>
+        <div class="col-auto podaci">
+            <p><b>Naziv magacina</b></p>
+        </div>
+        <div class="col-2">
+            <input type="text" name="nazivMag" [(ngModel)]="nazivMag">
+        </div>
+        <div class="col-2">
+            <button (click)="dodajMagacin()" class="dug">Dodaj magacin</button>
+        </div>
+    </div>
+</div>
+<hr class="hro">
+<div class="myContainer" style="margin-bottom: 50px;">
+    <div class="row red">
+        <div class="col podaci">
+            <h2>Kase<span *ngIf="kase.length>0"> - ukupan broj: {{kase.length}}</span></h2>
+        </div>
+    </div>
+    <div class="row red" *ngFor="let kasa of kase">
+        <div class="col-3 podaci">
+            <p><b>Lokacija objekta:</b> {{kasa.lokacijaObjekta}}</p>
+        </div>
+        <div class="col-3 podaci">
+            <p><b>Tip kase:</b> {{kasa.tip}}</p>
+        </div>
+        <div class="col-3">
+            <button (click)="brisiKasu(kasa)" class="dug">Obriši kasu</button>
+        </div>
+    </div>
+    <div class="row red" *ngIf="kase.length==0">
+        <div class="col-auto podaci">
+            <p><b>Nema kasa za prikaz.</b></p>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-auto podaci">
+            <h4>Dodavanje kasa</h4>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-auto podaci">
+            <p><b>Lokacija objekta</b></p>
+        </div>
+        <div class="col-2">
+            <input type="text" name="lokKasa" [(ngModel)]="lokKasa">
+        </div>
+        <div class="col-auto podaci">
+            <p><b>Tip kase</b></p>
+        </div>
+        <div class="col-2">
+            <select name="tipKasa" id="tipKasa" [(ngModel)]="tipKasa">
+                <option value="GALEB GE 10 BOX">GALEB GE 10 BOX</option>
+                <option value="GALEB N910 PRO">GALEB N910 PRO</option>
+                <option value="GALEB CPOS X5">GALEB CPOS X5</option>
+                <option value="Teron TPS900">Teron TPS900</option>
+                <option value="INT Raster DP-25MX">INT Raster DP-25MX</option>
+                <option value="INT Raster DP-150MX">INT Raster DP-150MX</option>
+            </select>
+        </div>
+        <div class="col-2">
+            <button (click)="dodajKasu()" class="dug">Dodaj kasu</button>
+        </div>
+    </div>
+</div>

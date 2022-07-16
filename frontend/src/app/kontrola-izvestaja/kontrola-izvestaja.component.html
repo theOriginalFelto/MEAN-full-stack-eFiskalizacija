@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row">
+        <div class="col" style="margin-bottom: 40px;">
+            <h2 class="prikaz">Kontrola izvještaja</h2>
+        </div>
+    </div>
+    <form>
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col">
+                <h6>Naziv preduzeća</h6>
+                <input type="text" name="naziv" [(ngModel)]="naziv">
+            </div>
+            <div class="col">
+                <h6>PIB</h6>
+                <input type="number" name="pib" [(ngModel)]="pib">
+            </div>
+            <div class="col">
+                <h6>Datum od</h6>
+                <input type="date" name="datumOd" [(ngModel)]="datumOd" required>
+            </div>
+            <div class="col">
+                <h6>Datum do</h6>
+                <input type="date" name="datumDo" [(ngModel)]="datumDo" required>
+            </div>
+            <div class="col">
+                <button style="border-radius: 10px; margin-top: 31px;" (click)="pretragaIzvjestaja()">Pretraga</button>
+            </div>
+        </div>
+    </form>
+    <div class="row" *ngIf="izvjestajFlag">
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="col">
+            <h4>Konačan iznos {{danOd}}.{{mesecOd}}.{{godinaOd}}-{{danDo}}.{{mesecDo}}.{{godinaDo}}. je: {{konacanUkupanIznos}} RSD</h4>
+        </div>
+        <div class="col">
+            <h4>Iznos PDV-a {{danOd}}.{{mesecOd}}.{{godinaOd}}-{{danDo}}.{{mesecDo}}.{{godinaDo}}. je: {{konacanIznosPDV}} RSD</h4>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" *ngIf="pretragaPoruka!=''">
+        <p>{{pretragaPoruka}}</p>
+    </div>
+</div>

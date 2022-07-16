@@ -1,0 +1,346 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col">
+            <h2>Svi artikli Vašeg preduzeća</h2>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col">
+            <p>Ukupno redova: {{sviArtikli.length}}</p>
+        </div>
+    </div>
+    <div class="prikaz">
+        <table>
+            <tr>
+                <th>Šifra</th>
+                <th>Naziv</th>
+                <th>Jedinica mjere</th>
+                <th>Stopa poreza</th>
+                <th>Proizvođač</th>
+                <th>Izmijeniti?</th>
+                <th>Obrisati?</th>
+            </tr>
+            <tr *ngFor="let art of artikliZaPrikaz">
+                <td>{{art.sifra}}</td>
+                <td>{{art.naziv}}</td>
+                <td>{{art.jedinicaMere}}</td>
+                <td>{{art.stopaPoreza}}</td>
+                <td>{{art.proizvodjac}}</td>
+                <td>
+                    <button (click)="izmijeniArtikal(art)" style="border-radius: 10px">Izmijeni</button>
+                </td>        
+                <td>
+                    <button (click)="brisiArtikal(art)" style="border-radius: 10px">Briši</button>
+                </td>        
+            </tr>
+        </table>
+    </div>
+    <div>
+        <ul class="lista prikaz">
+            <li style="margin-top: 4px;">
+                Stranice:&nbsp;
+            </li>
+            <li *ngFor="let artikli of matricaSvihArtikala, let i = index">
+                <button (click)="novaStranica(i)" class="pagDugme">{{i+1}}</button>
+            </li>
+            <li style="margin-top: 4px; margin-left: 100px;">
+                <p>Stranica koja se prikazuje: {{stranicaKojaSePrikazuje}}/{{brojStranicaZaPrikaz}}</p> 
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- izmjena artikla -->
+<div *ngIf="izmjenaFlag">
+    <hr class="hro">
+    <form>
+        <div class="container">
+            <div class="row red">
+                <div class="col">
+                <h2 style="margin-bottom: 15px;">Izmjena artikla</h2>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <p><b>Polja označena sa<span style="color: red">&nbsp;*&nbsp;</span>su obavezna.</b></p>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Šifra artikla<span style="color: red">*</span></h6>&nbsp;
+                    <input type="text" name="izmjenaSifra" [(ngModel)]="izmjenaSifra" required disabled>
+                </div>
+                <div class="col">
+                    <h6>Naziv artikla<span style="color: red">*</span></h6>&nbsp;
+                    <input type="text" name="izmjenaNaziv" [(ngModel)]="izmjenaNaziv" required>
+                </div>
+                <div class="col">
+                    <h6>Jedinica mjere<span style="color: red">*</span></h6>&nbsp;
+                    <input type="text" name="izmjenaJedMjere" [(ngModel)]="izmjenaJedMjere" required>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Poreska stopa<span style="color: red">*</span></h6>&nbsp;
+                    <input type="number" name="izmjenaPoreskaStopa" [(ngModel)]="izmjenaPoreskaStopa" required>
+                </div>
+                <div class="col" *ngIf="kat === 'ugostitelj'">
+                    <h6>Tip artikla<span style="color: red">*</span></h6>&nbsp;
+                    <input type="radio" id="hrana" name="izmjenaTip" value="hrana" [(ngModel)]="izmjenaTip" required>
+                    <label for="hrana">Hrana</label><br/>&nbsp;
+
+                    <input type="radio" id="pice" name="izmjenaTip" value="pice" [(ngModel)]="izmjenaTip">
+                    <label for="pice">Piće</label><br/>&nbsp;
+
+                    <input type="radio" id="sirovina" name="izmjenaTip" value="sirovina" [(ngModel)]="izmjenaTip">
+                    <label for="sirovina">Sirovina</label>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+            *ngIf="!dodatniPodaciIzmjenaFlag">
+                <button style="border-radius: 10px;" (click)="dodatniPodaciIzmjena()">Dodatni podaci</button>
+            </div>
+            <div *ngIf="dodatniPodaciIzmjenaFlag">
+                <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+                <div class="row red" style="margin-top: 25px;">
+                    <div class="col">
+                        <h6>Zemlja porijekla</h6>&nbsp;
+                        <input type="text" name="izmjenaZemljaPorijekla" [(ngModel)]="izmjenaZemljaPorijekla">
+                    </div>
+                    <div class="col">
+                        <h6>Strani naziv artikla</h6>&nbsp;
+                        <input type="text" name="izmjenaStraniNaziv" [(ngModel)]="izmjenaStraniNaziv">
+                    </div>
+                    <div class="col">
+                        <h6>Barkod broj</h6>&nbsp;
+                        <input type="number" name="izmjenaBarkod" [(ngModel)]="izmjenaBarkod">
+                    </div>
+                </div>
+                <div class="row red">
+                    <div class="col">
+                        <h6>Naziv proidzvođača</h6>&nbsp;
+                        <input type="text" name="izmjenaProizvodjac" [(ngModel)]="izmjenaProizvodjac">
+                    </div>
+                    <div class="col">
+                        <h6>Carinska tarifa</h6>&nbsp;
+                        <input type="number" name="izmjenaCarinskaTarifa" [(ngModel)]="izmjenaCarinskaTarifa">
+                    </div>
+                    <div class="col">
+                        <h6>Koje se takse primjenjuju?</h6>&nbsp;
+                        <input type="checkbox" id="ekoTaksa" name="izmjenaEkoTaksa" [(ngModel)]="izmjenaEkoTaksa">
+                        <label for="ekoTaksa">Eko taksa</label><br/>&nbsp;
+
+                        <input type="checkbox" id="akcize" name="izmjenaAkcize" [(ngModel)]="izmjenaAkcize">
+                        <label for="akcize">Akcize</label>
+                    </div>
+                </div>
+                <div class="row red">
+                    <div class="col">
+                        <h6>Minimalne željene zalihe</h6>&nbsp;
+                        <input type="number" name="izmjenaMinimalneZalihe" [(ngModel)]="izmjenaMinimalneZalihe">
+                    </div>
+                    <div class="col">
+                        <h6>Maksimalne željene zalihe</h6>&nbsp;
+                        <input type="number" name="izmjenaMaksimalneZalihe" [(ngModel)]="izmjenaMaksimalneZalihe">
+                    </div>
+                    <div class="col">
+                        <h6>Deklaracija</h6>&nbsp;
+                        <input type="text" name="izmjenaDeklaracija" [(ngModel)]="izmjenaDeklaracija">
+                    </div>
+                </div>
+                <div class="row red">
+                    <div class="col">
+                        <h6>Opis artikla</h6>&nbsp;
+                        <textarea name="izmjenaOpis" [(ngModel)]="izmjenaOpis"></textarea>
+                    </div>
+                    <div class="col">
+                        <h6>Slika artikla</h6>&nbsp;
+                        <label for="logoId" class="labela">Slika artikla (PNG, JPG)</label>
+                        <input type="file" name="logo" accept="image/png, image/jpeg" id="logoId"> 
+                        <script src="../assets/slike.js"></script> 
+                    </div>
+                </div>
+                <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+                    *ngIf="!cijeneIStanjeRobeIzmjenaFlag">
+                    <button style="border-radius: 10px;" (click)="cijeneIStanjeRobeIzmjena()">Cijene i stanje robe</button>
+                </div>
+            </div>
+            <div *ngIf="cijeneIStanjeRobeIzmjenaFlag">
+                <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+                <div class="prikaz">
+                    <table>
+                        <tr>
+                            <th>Naziv magacina/objekta</th>
+                            <th>Nabavna cijena (RSD)</th>
+                            <th>Prodajna cijena (RSD)</th>
+                            <th>Tekuće stanje lagera</th>
+                            <th>Minimalna željena količina</th>
+                            <th>Maksimalna željena količina</th>
+                        </tr>
+                        <tr *ngFor="let art of magacinArtikliIzmjena">
+                            <td>{{art.nazivMagacina}}</td>
+                            <td>{{art.nabavnaCena}}</td>
+                            <td>{{art.prodajnaCena}}</td>
+                            <td>{{art.tekuceStanje}}</td>
+                            <td>{{art.minimalnaZeljenaKolicina}}</td>
+                            <td>{{art.maksimalnaZeljenaKolicina}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;">
+                    <button style="border-radius: 10px;" (click)="izmijeniArtikalDugme()">Izmijeni artikal</button>
+                </div>
+                <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" 
+                *ngIf="izmjenaArtikalPoruka!=''">
+                    <p>{{izmjenaArtikalPoruka}}</p>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- unos artikla -->
+<hr class="hro">
+<form>
+    <div class="container">
+        <div>
+            <div class="row red">
+                <div class="col">
+                <h2 style="margin-bottom: 15px;">Unos novog artikla</h2>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <p><b>Polja označena sa<span style="color: red">&nbsp;*&nbsp;</span>su obavezna.</b></p>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Šifra artikla<span style="color: red">*</span></h6>&nbsp;
+                    <input type="text" name="novaSifra" [(ngModel)]="novaSifra" required [disabled]="dodatniPodaciUnosFlag">
+                </div>
+                <div class="col">
+                    <h6>Naziv artikla<span style="color: red">*</span></h6>&nbsp;
+                    <input type="text" name="noviNaziv" [(ngModel)]="noviNaziv" required>
+                </div>
+                <div class="col">
+                    <h6>Jedinica mjere<span style="color: red">*</span></h6>&nbsp;
+                    <input type="text" name="novaJedMjere" [(ngModel)]="novaJedMjere" required>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Poreska stopa<span style="color: red">*</span></h6>&nbsp;
+                    <input type="number" name="novaPoreskaStopa" [(ngModel)]="novaPoreskaStopa" required>
+                </div>
+                <div class="col" *ngIf="kat === 'ugostitelj'">
+                    <h6>Tip artikla<span style="color: red">*</span></h6>&nbsp;
+                    <input type="radio" id="hrana" name="noviTip" value="hrana" [(ngModel)]="noviTip" required>
+                    <label for="hrana">Hrana</label><br/>&nbsp;
+                    <input type="radio" id="pice" name="noviTip" value="pice" [(ngModel)]="noviTip">
+                    <label for="pice">Piće</label><br/>&nbsp;
+                    <input type="radio" id="sirovina" name="noviTip" value="sirovina" [(ngModel)]="noviTip">
+                    <label for="sirovina">Sirovina</label>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+            *ngIf="!dodatniPodaciUnosFlag">
+                <button style="border-radius: 10px;" (click)="dodatniPodaciUnos()" [disabled]="!novaSifra">Dodatni podaci</button>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" *ngIf="artikalPoruka!=''">
+                <p>{{artikalPoruka}}</p>
+            </div>
+        </div>
+        <div *ngIf="dodatniPodaciUnosFlag">
+            <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+            <div class="row red" style="margin-top: 25px;">
+                <div class="col">
+                    <h6>Zemlja porijekla</h6>&nbsp;
+                    <input type="text" name="novaZemljaPorijekla" [(ngModel)]="novaZemljaPorijekla">
+                </div>
+                <div class="col">
+                    <h6>Strani naziv artikla</h6>&nbsp;
+                    <input type="text" name="noviStraniNaziv" [(ngModel)]="noviStraniNaziv">
+                </div>
+                <div class="col">
+                    <h6>Barkod broj</h6>&nbsp;
+                    <input type="number" name="noviBarkod" [(ngModel)]="noviBarkod">
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Naziv proidzvođača</h6>&nbsp;
+                    <input type="text" name="noviProizvodjac" [(ngModel)]="noviProizvodjac">
+                </div>
+                <div class="col">
+                    <h6>Carinska tarifa</h6>&nbsp;
+                    <input type="number" name="novaCarinskaTarifa" [(ngModel)]="novaCarinskaTarifa">
+                </div>
+                <div class="col">
+                    <h6>Koje se takse primjenjuju?</h6>&nbsp;
+                    <input type="checkbox" id="ekoTaksa" name="novaEkoTaksa" [(ngModel)]="novaEkoTaksa">
+                    <label for="ekoTaksa">Eko taksa</label><br/>&nbsp;
+                    <input type="checkbox" id="akcize" name="noveAkcize" [(ngModel)]="noveAkcize">
+                    <label for="akcize">Akcize</label>
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Minimalne željene zalihe</h6>&nbsp;
+                    <input type="number" name="noveMinimalneZalihe" [(ngModel)]="noveMinimalneZalihe">
+                </div>
+                <div class="col">
+                    <h6>Maksimalne željene zalihe</h6>&nbsp;
+                    <input type="number" name="noveMaksimalneZalihe" [(ngModel)]="noveMaksimalneZalihe">
+                </div>
+                <div class="col">
+                    <h6>Deklaracija</h6>&nbsp;
+                    <input type="text" name="novaDeklaracija" [(ngModel)]="novaDeklaracija">
+                </div>
+            </div>
+            <div class="row red">
+                <div class="col">
+                    <h6>Opis artikla</h6>&nbsp;
+                    <textarea name="noviOpis" [(ngModel)]="noviOpis"></textarea>
+                </div>
+                <div class="col">
+                    <h6>Slika artikla</h6>&nbsp;
+                    <label for="logoId" class="labela">Slika artikla (PNG, JPG)</label>
+                    <input type="file" name="logo" accept="image/png, image/jpeg" id="logoId"> 
+                    <script src="../assets/slike.js"></script> 
+                </div>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+            *ngIf="!cijeneIStanjeRobeUnosFlag">
+                <button style="border-radius: 10px;" (click)="cijeneIStanjeRobeUnos()">Cijene i stanje robe</button>
+            </div>
+        </div>
+        <div *ngIf="cijeneIStanjeRobeUnosFlag">
+            <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+            <div class="prikaz">
+                <table>
+                    <tr>
+                        <th>Naziv magacina/objekta</th>
+                        <th>Nabavna cijena (RSD)</th>
+                        <th>Prodajna cijena (RSD)</th>
+                        <th>Tekuće stanje lagera</th>
+                        <th>Minimalna željena količina</th>
+                        <th>Maksimalna željena količina</th>
+                    </tr>
+                    <tr *ngFor="let art of magacinArtikliUnos">
+                        <td>{{art.nazivMagacina}}</td>
+                        <td>{{art.nabavnaCena}}</td>
+                        <td>{{art.prodajnaCena}}</td>
+                        <td>{{art.tekuceStanje}}</td>
+                        <td>{{art.minimalnaZeljenaKolicina}}</td>
+                        <td>{{art.maksimalnaZeljenaKolicina}}</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;">
+                <button style="border-radius: 10px;" (click)="dodajArtikal()">Dodaj artikal</button>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" *ngIf="artikalPoruka!=''">
+                <p>{{artikalPoruka}}</p>
+            </div>
+        </div>
+    </div>
+</form>

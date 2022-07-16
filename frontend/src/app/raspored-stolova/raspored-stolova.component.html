@@ -1,0 +1,105 @@
+<div class="prikaz">
+    <h2 style="text-transform: uppercase;">Raspored stolova u lokalu</h2>
+</div>
+<div class="prikaz" style="margin-top: 40px;">
+    <h3>Dodavanje odjeljenja</h3>
+</div>
+<div class="container prikaz" style="margin-top: 20px;">
+    <div class="row red">
+        <div class="col-auto">
+            <h6>Naziv odjeljenja</h6>
+            <input type="text" name="nazivOdjeljenja" [(ngModel)]="nazivOdjeljenja" required>
+        </div>
+        <div class="col-auto">
+            <div class="dugme-pomjeraj">
+                <button (click)="dodajOdjeljenje()" class="dugme">Dodaj odjeljenje</button>
+            </div>
+        </div>        
+    </div>
+    <div class="prikaz" style="margin-top: 20px; margin-bottom: 25px;" 
+    *ngIf="dodavanjeOdjeljenjaPoruka!=''">
+        <p>{{dodavanjeOdjeljenjaPoruka}}</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row prikaz" style="margin-bottom: 20px">
+        <div class="col-auto" style="margin: 20px 0px;">
+            <h3>Izbor odjeljenja</h3>
+        </div>
+    </div>
+    <div class="row prikaz" style="margin-bottom: 20px;">
+        <div class="col-auto" style="margin-bottom: 10px;" *ngFor="let od of odjeljenja; let i = index">
+            <button (click)="izaberiOdjeljenje(i)" style="border-radius: 10px; padding: 10px 15px;">{{od.naziv}}</button>
+        </div>
+    </div>
+</div>
+<div class="prikaz" style="margin-top: 80px;">
+    <h5>Raspored stolova za odjeljenje {{trenOdjeljenje.naziv}}</h5>
+</div>
+<div class="prikaz">
+    <canvas id="canvas" width="800" height="400"></canvas>
+</div>
+<div class="prikaz">
+    <button (click)="sacuvaj()" style="border-radius: 10px; margin-bottom: 30px;">Sačuvaj raspored</button>
+</div>
+<div style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" 
+*ngIf="sacuvajPoruka!=''">
+    <p>{{sacuvajPoruka}}</p>
+</div>
+<form>
+    <div class="prikaz">
+        <h2>Dodavanje stola</h2>
+    </div>
+    <div class="container">
+        <div class="row prikaz">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Tip stola </p>
+            </div>
+            <div class="col-3" style="margin-top: 7px;">
+                <input type="radio" id="pravougaoni" name="tipStola" value="pravougaoni" [(ngModel)]="tipStola" required>
+                <label for="pravougaoni">Pravougaoni</label>&nbsp;
+                <input type="radio" id="okrugli" name="tipStola" value="okrugli" [(ngModel)]="tipStola" required>
+                <label for="okrugli">Okrugli</label>&nbsp;
+            </div>
+        </div>
+        <div class="row prikaz">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">X koordinata</p>
+            </div>
+            <div class="col-2">
+                <input type="number" name="xNoviSto" [(ngModel)]="xNoviSto" required>
+            </div>
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Y koordinata</p>
+            </div>
+            <div class="col-2">
+                <input type="number" name="yNoviSto" [(ngModel)]="yNoviSto" required>
+            </div>
+        </div>
+        <div class="row prikaz" *ngIf="tipStola==='pravougaoni'">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Širina</p>
+            </div>
+            <div class="col-2">
+                <input type="number" name="sirinaNoviSto" [(ngModel)]="sirinaNoviSto" required>
+            </div>
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Visina</p>
+            </div>
+            <div class="col-2">
+                <input type="number" name="visinaNoviSto" [(ngModel)]="visinaNoviSto" required>
+            </div>
+        </div>
+        <div class="row prikaz" *ngIf="tipStola==='okrugli'">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Poluprečnik</p>
+            </div>
+            <div class="col-2">
+                <input type="number" name="poluprecnikNoviSto" [(ngModel)]="poluprecnikNoviSto" required>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="prikaz">
+    <button (click)="dodajSto()" style="border-radius: 10px; margin-bottom: 30px;">Dodaj sto</button>
+</div>

@@ -1,0 +1,205 @@
+<div class="myContainer" style="margin-bottom: 50px;">
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Korisničko ime:</b> {{korisnik.korisnickoIme}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="novoKorIme" [(ngModel)]="novoKorIme">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaKorIme()" class="dug">Promijeni korisničko ime</button>
+        </div>
+        <div class="col-3" *ngIf="korImePoruka!=''">
+            <p>{{korImePoruka}}</p>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Ime:</b> {{korisnik.ime}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="novoIme" [(ngModel)]="novoIme">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaIme()" class="dug">Promijeni ime</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Prezime:</b> {{korisnik.prezime}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="novoPrezime" [(ngModel)]="novoPrezime">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaPrezime()" class="dug">Promijeni prezime</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Telefon:</b> {{korisnik.telefon}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviTelefon" [(ngModel)]="noviTelefon">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaTelefon()" class="dug">Promijeni telefon</button>
+        </div>
+    </div>
+    <!-- odavde ide preduzeće -->
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>E-mail:</b> {{preduzece.email}}</p>
+        </div>
+        <div class="col-3">
+            <input type="email" name="noviEmail" [(ngModel)]="noviEmail">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaEmail()" class="dug">Promijeni e-mail</button>
+        </div>
+        <div class="col-3" *ngIf="emailPoruka!=''">
+            <p>{{emailPoruka}}</p>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Naziv preduzeća:</b> {{preduzece.naziv}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviNaziv" [(ngModel)]="noviNaziv">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaNaziv()" class="dug">Promijeni naziv</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Država:</b> {{preduzece.drzava}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="novaDrzava" [(ngModel)]="novaDrzava">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaDrzava()" class="dug">Promijeni državu</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Grad:</b> {{preduzece.grad}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviGrad" [(ngModel)]="noviGrad">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaGrad()" class="dug">Promijeni grad</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Poštanski broj:</b> {{preduzece.postanskiBroj}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviPbr" [(ngModel)]="noviPbr">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaPbr()" class="dug">Promijeni poštanski broj</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Ulica:</b> {{preduzece.ulica}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="novaUlica" [(ngModel)]="novaUlica">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaUlica()" class="dug">Promijeni ulicu</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Broj:</b> {{preduzece.broj}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviBroj" [(ngModel)]="noviBroj">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaBroj()" class="dug">Promijeni broj</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>PIB:</b> {{preduzece.PIB}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviPIB" [(ngModel)]="noviPIB">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaPIB()" class="dug">Promijeni PIB</button>
+        </div>
+        <div class="col-3" *ngIf="pibPoruka!=''">
+            <p>{{pibPoruka}}</p>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Matični broj:</b> {{preduzece.maticniBroj}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviMB" [(ngModel)]="noviMB">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaMB()" class="dug">Promijeni matični broj</button>
+        </div>
+        <div class="col-3" *ngIf="mbPoruka!=''">
+            <p>{{mbPoruka}}</p>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Kategorija:</b> {{preduzece.kategorija}}</p>
+        </div>
+        <div class="col-3 podaci">
+            <input type="radio" id="prodavnica" name="novaKategorija" value="prodavnica" [(ngModel)]="novaKategorija">
+            <label for="prodavnica">Prodavnica</label>&nbsp;
+            <input type="radio" id="ugostitelj" name="novaKategorija" value="ugostitelj" [(ngModel)]="novaKategorija">
+            <label for="ugostitelj">Ugostitelj</label>
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaKategorija()" class="dug">Promijeni kategoriju</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Šifre djelatnosti:</b> {{preduzece.sifreDelatnosti}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noveSifreDj" [(ngModel)]="noveSifreDj">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaSifriDj()" class="dug">Promijeni šifre djelatnosti</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Broj magacina:</b> {{preduzece.brojMagacina}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviBrojMagacina" [(ngModel)]="noviBrojMagacina">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaBrojMagacina()" class="dug">Promijeni broj magacina</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-3 podaci">
+            <p><b>Broj kasa:</b> {{preduzece.brojKasa}}</p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviBrojKasa" [(ngModel)]="noviBrojKasa">
+        </div>
+        <div class="col-3">
+            <button (click)="promjenaBrojKasa()" class="dug">Promijeni broj kasa</button>
+        </div>
+    </div>
+</div>

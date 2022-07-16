@@ -1,0 +1,52 @@
+<div class="login">
+    <h2>Posljednjih 5 računa u sistemu</h2>
+</div>
+<div class="login">
+    <table class="tabela">
+        <tr>
+            <th class="celija" style="font-size: 24px;">Naziv preduzeća</th>
+            <th class="celija" style="font-size: 24px;">Iznos računa (RSD)</th>
+            <th class="celija" style="font-size: 24px;">Iznos PDV-a (RSD)</th>
+            <th class="celija" style="font-size: 24px;">Stavke (artikli i količina)</th>
+        </tr>
+        <tr *ngFor="let rac of petRacuna">
+            <td class="celija" style="font-size: 24px;">{{rac.nazivPred}}</td>
+            <td class="celija" style="font-size: 24px;">{{rac.ukupanIznos}}</td>
+            <td class="celija" style="font-size: 24px;">{{rac.iznosPDV}}</td>
+            <td class="celija">
+                <ul>
+                    <li *ngFor="let st of rac.stavke" class="lista">
+                        {{st.artikal.naziv}} kom. {{st.kolicina}}
+                    </li>
+                </ul>
+            </td>  
+        </tr>
+    </table>
+</div>
+<div class="login">
+    <h2>Prijava</h2>
+</div>
+<div class="login">
+    <table>
+        <tr>
+            <td>Korisničko ime</td>
+            <td>
+                <input type="text" name="korIme" [(ngModel)]="korIme">
+            </td>
+        </tr>
+        <tr>
+            <td>Lozinka</td>
+            <td>
+                <input type="password" name="lozinka" [(ngModel)]="lozinka"> 
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="login" style="margin-top: 10px;">
+    <button (click)="prijava()" class="but" style="padding: 15px 30px">Prijavi se</button>
+</div>
+<div class="login" style="margin-top: 10px;">
+    <p>{{poruka}} <br/><br/>
+    Nemate nalog? <a routerLink="/register">Registrujte se odmah!</a> (samo preduzeća)</p>
+</div>
+

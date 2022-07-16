@@ -1,0 +1,24 @@
+<div class="myContainer" style="margin-bottom: 50px;">
+    <div class="row red" *ngFor="let racun of ziroRacuni">
+        <div class="col-3 podaci">
+            <p><b>Broj računa:</b> {{racun}}</p>
+        </div>
+        <div class="col-3">
+            <button (click)="brisiZiroRacun(racun)" class="dug">Obriši račun</button>
+        </div>
+    </div>
+    <div class="row red">
+        <div class="col-2 podaci">
+            <p><b>Dodavanje računa</b></p>
+        </div>
+        <div class="col-3">
+            <input type="text" name="noviRacun" [(ngModel)]="noviRacun">
+        </div>
+        <div class="col-2">
+            <button (click)="dodajZiroRacun()" class="dug">Dodaj račun</button>
+        </div>
+        <div class="col" *ngIf="racunPoruka!=''">
+            <p>{{racunPoruka}}</p>
+        </div>
+    </div>
+</div>

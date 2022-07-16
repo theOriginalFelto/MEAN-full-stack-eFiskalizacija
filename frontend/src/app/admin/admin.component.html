@@ -1,0 +1,26 @@
+<div class="login" style="margin: 0;">
+    <h3>Admin prijava</h3>
+</div>
+<div class="login">
+    <table>
+        <tr>
+            <td>Korisničko ime</td>
+            <td>
+                <input type="text" name="korIme" [(ngModel)]="korIme">
+            </td>
+        </tr>
+        <tr>
+            <td>Lozinka</td>
+            <td>
+                <input type="password" name="lozinka" [(ngModel)]="lozinka"> 
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="login" style="margin-top: 10px;">
+    <button (click)="prijavaAdmin()" class="but" style="padding: 15px 30px">Prijavi se</button>
+</div>
+<div class="login" style="margin-top: 10px;">
+    <p>{{poruka}} <br/><br/>
+</div>
+

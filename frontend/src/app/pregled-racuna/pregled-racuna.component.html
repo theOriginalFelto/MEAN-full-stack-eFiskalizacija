@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="row">
+        <div class="col" style="margin-bottom: 10px;">
+            <h2>Vaši računi</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="margin-bottom: 10px;">
+            <h5>Potrošnja u RSD u tekućem mjesecu</h5>
+        </div>
+    </div>
+    <div class="grafico">
+        <div class="content">
+            <div class="bars" *ngFor="let item of daniUMjesecu">
+                <span>{{item.Value}}</span>
+                <div class="bar" [style.background-color]="item.Color" [style.height]='item.Size'></div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="legends">
+            <span *ngFor="let item of daniUMjesecu">{{item.Legend}}</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col" style="margin-bottom: 10px; margin-top: 20px;">
+            <h5>Potrošnja u RSD tokom godine</h5>
+        </div>
+    </div>
+    <div class="grafico">
+        <div class="content">
+            <div class="bars" *ngFor="let item of mjeseci" style="margin: 0px 16px;">
+                <span>{{item.Value}}</span>
+                <div class="bar" [style.background-color]="item.Color" [style.height]='item.Size' style="width: 30px;"></div>
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="legends">
+            <span *ngFor="let item of mjeseci" style="margin: 0px 20px;">{{item.Legend}}</span>
+        </div>
+    </div>
+    <div class="prikaz" style="margin-top: 40px;">
+        <table>
+            <tr>
+                <th>Naziv preduzeća</th>
+                <th>Mjesto izdavanja</th>
+                <th>Iznos</th>
+                <th>Način plaćanja</th>
+                <th>Izabrati?</th>
+            </tr>
+            <tr *ngFor="let rac of sviRacuni">
+                <td>{{rac.nazivPred}}</td>
+                <td>{{rac.gradIzdavanja}}, {{rac.ulicaIzdavanja}} {{rac.brojIzdavanja}}</td>
+                <td>{{rac.ukupanIznos}}</td>
+                <td>{{rac.nacinPlacanja}}</td>
+                <td>
+                    <button (click)="izaberiRacun(rac)" style="border-radius: 10px">Izaberi</button>
+                </td>  
+            </tr>
+        </table>
+    </div>
+    <div *ngIf="prikazRacunaFlag">
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Vrijeme i datum izdavanja</th>
+                    <th>Stavke (naziv i količina)</th>
+                </tr>
+                <tr>
+                    <td>{{trenRacun.dan}}.{{trenRacun.mesec}}.{{trenRacun.godina}}. u {{sati}}:{{minuti}}:{{sekundi}}</td>
+                    <td>
+                        <ul>
+                            <li *ngFor="let st of trenRacun.stavke" class="lista">
+                                {{st.artikal.naziv}} kom. {{st.kolicina}}
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,424 @@
+<div *ngIf="kategorijaPreduzeca!='ugostitelj'">
+    <div class="container">
+        <div class="row">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Trenutni račun</h2>
+            </div>
+        </div>
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Naziv artikla</th>
+                    <th>Cijena</th>
+                    <th>Količina</th>
+                    <th>Ukupna cijena</th>
+                </tr>
+                <tr *ngFor="let st of trenRacun.stavke">
+                    <td>{{st.artikal.naziv}}</td>
+                    <td>{{st.artikalUMagacinu.prodajnaCena}} RSD</td>
+                    <td>{{st.kolicina}}</td>
+                    <td>{{st.artikalUMagacinu.prodajnaCena*st.kolicina}} RSD</td>  
+                </tr>
+            </table>
+        </div>
+        <div class="row red">
+            <div class="col" style="margin-bottom: 10px;">
+                <h5>Ukupan iznos računa: {{trenRacun.ukupanIznos}}</h5>
+            </div>
+            <div class="col" style="margin-bottom: 10px;" *ngIf="daLiJePDV && trenRacun.iznosPDV>0">
+                <h5>Ukupan iznos PDV-a: {{trenRacun.iznosPDV}}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h3>Način plaćanja</h3>&nbsp;
+                <input type="radio" id="gotovina" name="placanje" value="Gotovina" [(ngModel)]="placanje">
+                <label for="gotovina">Gotovina</label><br/>&nbsp;
+
+                <input type="radio" id="cek" name="placanje" value="Ček" [(ngModel)]="placanje">
+                <label for="cek">Ček</label><br/>&nbsp;
+                
+                <input type="radio" id="kartica" name="placanje" value="Kartica" [(ngModel)]="placanje">
+                <label for="kartica">Kartica</label><br/>&nbsp;
+
+                <input type="radio" id="virman" name="placanje" value="Virman" [(ngModel)]="placanje">
+                <label for="virman">Virman</label>
+            </div>
+            <div class="col" style="margin-top: 80px;">
+                <button style="border-radius: 10px;" (click)="zatvaranjeRacuna()" [disabled]="placanje=='' || trenRacun.ukupanIznos==0"
+                >Zatvaranje računa</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='Gotovina'">
+            <div class="col">
+                <h5>Kupac daje</h5>&nbsp;
+                <input type="number" name="iznos" [(ngModel)]="iznos">&nbsp;RSD
+            </div>
+            <div class="col">
+                <h5>Broj lične karte</h5>&nbsp;
+                <input type="number" name="brojLK" [(ngModel)]="brojLK">
+            </div>
+            <div class="col">
+                <h5 *ngIf="iznos>=trenRacun.ukupanIznos">Kusur: {{iznos-trenRacun.ukupanIznos}} RSD</h5>
+                <h5 *ngIf="iznos<trenRacun.ukupanIznos">Kupac daje nedovoljno novca!</h5>
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='Ček'">
+            <div class="col">
+                <h5>Ime kupca</h5>&nbsp;
+                <input type="string" name="imeKupca" [(ngModel)]="imeKupca">
+            </div>
+            <div class="col">
+                <h5>Prezime kupca</h5>&nbsp;
+                <input type="string" name="prezimeKupca" [(ngModel)]="prezimeKupca">
+            </div>
+            <div class="col">
+                <h5>Broj lične karte</h5>&nbsp;
+                <input type="number" name="brojLK" [(ngModel)]="brojLK">
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='Kartica'">
+            <div class="col">
+                <h5>Broj lične karte</h5>&nbsp;
+                <input type="number" name="brojLK" [(ngModel)]="brojLK">
+            </div>
+            <div class="col">
+                <h5>Broj slip računa</h5>&nbsp;
+                <input type="number" name="brojSlip" [(ngModel)]="brojSlip">
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='Virman'">
+            <div class="prikaz" style="margin-top: 40px;">
+                <h3>Izaberite nekog od naručilaca</h3>
+            </div>
+            <div class="prikaz" style="margin-top: 40px;">
+                <table>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>PIB</th>
+                        <th>Matični broj</th>
+                        <th>Izabrati naručioca?</th>
+                    </tr>
+                    <tr *ngFor="let nar of narucioci">
+                        <td>{{nar.naziv}}</td>
+                        <td>{{nar.PIB}}</td>
+                        <td>{{nar.maticniBroj}}</td>
+                        <td>
+                            <button (click)="izaberiNarucioca(nar.PIB)" style="border-radius: 10px">Izaberi</button>
+                        </td>      
+                    </tr>
+                </table>
+            </div>
+            <div class="prikaz" style="margin-top: 40px;" *ngIf="pibNarucioca!=''">
+                <h4>Izabran naručilac sa PIB-om: {{pibNarucioca}}</h4>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+        *ngIf="zatvaranjeRacunaFlag">
+            <button style="border-radius: 10px;" (click)="zatvoriRacun()" [disabled]="placanje==='Gotovina' && 
+            (iznos-trenRacun.ukupanIznos<0 || !iznos)">Zatvori račun</button>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" *ngIf="zatvoriRacunPoruka!=''">
+            <p>{{zatvoriRacunPoruka}}</p>
+        </div>
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="row">
+            <div class="col">
+                <h2 style="margin-bottom: 30px;">Dodavanje stavke</h2>
+            </div>
+        </div>
+        <div class="row prikaz">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Pretraga po nazivu artikla: </p>
+            </div>
+            <div class="col-5">
+                <input type="text" name="pretragaNaziv" [(ngModel)]="pretragaNaziv" (ngModelChange)="pretraga()">
+            </div>
+        </div>
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Šifra</th>
+                    <th>Naziv</th>
+                    <th>Jedinica mjere</th>
+                    <th>Stopa poreza</th>
+                    <th>Proizvođač</th>
+                    <th>Izabrati artikal?</th>
+                </tr>
+                <tr *ngFor="let art of sviArtikli">
+                    <td>{{art.sifra}}</td>
+                    <td>{{art.naziv}}</td>
+                    <td>{{art.jedinicaMere}}</td>
+                    <td>{{art.stopaPoreza}}</td>
+                    <td>{{art.proizvodjac}}</td>
+                    <td>
+                        <button (click)="izaberi(art)" style="border-radius: 10px">Izaberi</button>
+                    </td>      
+                </tr>
+            </table>
+        </div>
+        <div *ngIf="izborIzMagacinaFlag">
+            <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+            <div class="prikaz" style="margin-top: 40px;">
+                <table>
+                    <tr>
+                        <th>Naziv magacina/objekta</th>
+                        <th>Nabavna cijena (RSD)</th>
+                        <th>Prodajna cijena (RSD)</th>
+                        <th>Tekuće stanje lagera</th>
+                        <th>Minimalna željena količina</th>
+                        <th>Maksimalna željena količina</th>
+                        <th>Izabrati?</th>
+                    </tr>
+                    <tr *ngFor="let art of magacinArtikli">
+                        <td>{{art.nazivMagacina}}</td>
+                        <td>{{art.nabavnaCena}}</td>
+                        <td>{{art.prodajnaCena}}</td>
+                        <td>{{art.tekuceStanje}}</td>
+                        <td>{{art.minimalnaZeljenaKolicina}}</td>
+                        <td>{{art.maksimalnaZeljenaKolicina}}</td>
+                        <td>
+                            <button (click)="izaberiMagacin(art)" style="border-radius: 10px">Izaberi</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+            *ngIf="unosKolicineFlag">
+                <div class="col">
+                    <h6>Količina</h6>&nbsp;
+                    <input type="number" name="kolicina" [(ngModel)]="kolicina">
+                </div>
+                <div class="col">
+                    <button style="border-radius: 10px; margin-top: 52px;" (click)="dodajStavku()">Dodaj stavku</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" 
+        *ngIf="dodataStavkaPoruka!=''">
+            <p>{{dodataStavkaPoruka}}</p>
+        </div>
+    </div>
+</div>
+<div *ngIf="kategorijaPreduzeca==='ugostitelj'">
+    <div class="container">
+        <div class="row">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Izbor odjeljenja</h2>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-auto" style="margin-bottom: 10px;" *ngFor="let od of odjeljenja; let i = index">
+                <button (click)="izaberiOdjeljenje(i)" style="border-radius: 10px">{{od.naziv}}</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Izbor stola u {{trenOdjeljenje.naziv}}</h2>
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-auto" style="margin-bottom: 10px;" *ngFor="let sto of racuni; let i = index">
+                <button (click)="izaberiSto(i)" style="border-radius: 10px">Sto broj {{i+1}}
+                <span *ngIf="racuni[i].ukupanIznos>0"> ZAUZET</span></button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col" style="margin-bottom: 10px;">
+                <h2>Trenutni račun (sto broj {{indexStola+1}})</h2>
+            </div>
+        </div>
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Naziv artikla</th>
+                    <th>Cijena</th>
+                    <th>Količina</th>
+                    <th>Ukupna cijena</th>
+                </tr>
+                <tr *ngFor="let st of trenRacun.stavke">
+                    <td>{{st.artikal.naziv}}</td>
+                    <td>{{st.artikalUMagacinu.prodajnaCena}} RSD</td>
+                    <td>{{st.kolicina}}</td>
+                    <td>{{st.artikalUMagacinu.prodajnaCena*st.kolicina}} RSD</td>  
+                </tr>
+            </table>
+        </div>
+        <div class="row red">
+            <div class="col" style="margin-bottom: 10px;">
+                <h5>Ukupan iznos računa: {{trenRacun.ukupanIznos}}</h5>
+            </div>
+            <div class="col" style="margin-bottom: 10px;" *ngIf="daLiJePDV && trenRacun.iznosPDV>0">
+                <h5>Ukupan iznos PDV-a: {{trenRacun.iznosPDV}}</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3">
+                <h3>Način plaćanja</h3>&nbsp;
+                <input type="radio" id="gotovina" name="placanje" value="gotovina" [(ngModel)]="placanje">
+                <label for="gotovina">Gotovina</label><br/>&nbsp;
+
+                <input type="radio" id="cek" name="placanje" value="cek" [(ngModel)]="placanje">
+                <label for="cek">Ček</label><br/>&nbsp;
+                
+                <input type="radio" id="kartica" name="placanje" value="kartica" [(ngModel)]="placanje">
+                <label for="kartica">Kartica</label><br/>&nbsp;
+
+                <input type="radio" id="virman" name="placanje" value="virman" [(ngModel)]="placanje">
+                <label for="virman">Virman</label>
+            </div>
+            <div class="col" style="margin-top: 80px;">
+                <button style="border-radius: 10px;" (click)="zatvaranjeRacuna()" [disabled]="placanje=='' || trenRacun.ukupanIznos==0"
+                >Zatvaranje računa</button>
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='gotovina'">
+            <div class="col">
+                <h5>Kupac daje</h5>&nbsp;
+                <input type="number" name="iznos" [(ngModel)]="iznos">&nbsp;RSD
+            </div>
+            <div class="col">
+                <h5>Broj lične karte</h5>&nbsp;
+                <input type="number" name="brojLK" [(ngModel)]="brojLK">
+            </div>
+            <div class="col">
+                <h5 *ngIf="iznos>=trenRacun.ukupanIznos">Kusur: {{iznos-trenRacun.ukupanIznos}} RSD</h5>
+                <h5 *ngIf="iznos<trenRacun.ukupanIznos">Kupac daje nedovoljno novca!</h5>
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='cek'">
+            <div class="col">
+                <h5>Ime kupca</h5>&nbsp;
+                <input type="string" name="imeKupca" [(ngModel)]="imeKupca">
+            </div>
+            <div class="col">
+                <h5>Prezime kupca</h5>&nbsp;
+                <input type="string" name="prezimeKupca" [(ngModel)]="prezimeKupca">
+            </div>
+            <div class="col">
+                <h5>Broj lične karte</h5>&nbsp;
+                <input type="number" name="brojLK" [(ngModel)]="brojLK">
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='kartica'">
+            <div class="col">
+                <h5>Broj lične karte</h5>&nbsp;
+                <input type="number" name="brojLK" [(ngModel)]="brojLK">
+            </div>
+            <div class="col">
+                <h5>Broj slip računa</h5>&nbsp;
+                <input type="number" name="brojSlip" [(ngModel)]="brojSlip">
+            </div>
+        </div>
+        <div class="row" *ngIf="zatvaranjeRacunaFlag && placanje==='virman'">
+            <div class="prikaz" style="margin-top: 40px;">
+                <h3>Izaberite nekog od naručilaca</h3>
+            </div>
+            <div class="prikaz" style="margin-top: 40px;">
+                <table>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>PIB</th>
+                        <th>Matični broj</th>
+                        <th>Izabrati naručioca?</th>
+                    </tr>
+                    <tr *ngFor="let nar of narucioci">
+                        <td>{{nar.naziv}}</td>
+                        <td>{{nar.PIB}}</td>
+                        <td>{{nar.maticniBroj}}</td>
+                        <td>
+                            <button (click)="izaberiNarucioca(nar.PIB)" style="border-radius: 10px">Izaberi</button>
+                        </td>      
+                    </tr>
+                </table>
+            </div>
+            <div class="prikaz" style="margin-top: 40px;" *ngIf="pibNarucioca!=''">
+                <h4>Izabran naručilac sa PIB-om: {{pibNarucioca}}</h4>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+        *ngIf="zatvaranjeRacunaFlag">
+            <button style="border-radius: 10px;" (click)="zatvoriRacun()">Zatvori račun</button>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" *ngIf="zatvoriRacunPoruka!=''">
+            <p>{{zatvoriRacunPoruka}}</p>
+        </div>
+        <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+        <div class="row">
+            <div class="col">
+                <h2 style="margin-bottom: 30px;">Dodavanje stavke</h2>
+            </div>
+        </div>
+        <div class="row prikaz">
+            <div class="col-auto">
+                <p style="margin-top: 7px;">Pretraga po nazivu artikla: </p>
+            </div>
+            <div class="col-5">
+                <input type="text" name="pretragaNaziv" [(ngModel)]="pretragaNaziv" (ngModelChange)="pretraga()">
+            </div>
+        </div>
+        <div class="prikaz" style="margin-top: 40px;">
+            <table>
+                <tr>
+                    <th>Šifra</th>
+                    <th>Naziv</th>
+                    <th>Jedinica mjere</th>
+                    <th>Stopa poreza</th>
+                    <th>Proizvođač</th>
+                    <th>Izabrati artikal?</th>
+                </tr>
+                <tr *ngFor="let art of sviArtikli">
+                    <td>{{art.sifra}}</td>
+                    <td>{{art.naziv}}</td>
+                    <td>{{art.jedinicaMere}}</td>
+                    <td>{{art.stopaPoreza}}</td>
+                    <td>{{art.proizvodjac}}</td>
+                    <td>
+                        <button (click)="izaberi(art)" style="border-radius: 10px">Izaberi</button>
+                    </td>      
+                </tr>
+            </table>
+        </div>
+        <div *ngIf="izborIzMagacinaFlag">
+            <hr style="border-top: 1px dotted rgb(1, 97, 252);">
+            <div class="prikaz" style="margin-top: 40px;">
+                <table>
+                    <tr>
+                        <th>Naziv magacina/objekta</th>
+                        <th>Nabavna cijena (RSD)</th>
+                        <th>Prodajna cijena (RSD)</th>
+                        <th>Tekuće stanje lagera</th>
+                        <th>Minimalna željena količina</th>
+                        <th>Maksimalna željena količina</th>
+                        <th>Izabrati?</th>
+                    </tr>
+                    <tr *ngFor="let art of magacinArtikli">
+                        <td>{{art.nazivMagacina}}</td>
+                        <td>{{art.nabavnaCena}}</td>
+                        <td>{{art.prodajnaCena}}</td>
+                        <td>{{art.tekuceStanje}}</td>
+                        <td>{{art.minimalnaZeljenaKolicina}}</td>
+                        <td>{{art.maksimalnaZeljenaKolicina}}</td>
+                        <td>
+                            <button (click)="izaberiMagacin(art)" style="border-radius: 10px">Izaberi</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;"
+            *ngIf="unosKolicineFlag">
+                <div class="col">
+                    <h6>Količina</h6>&nbsp;
+                    <input type="number" name="kolicina" [(ngModel)]="kolicina">
+                </div>
+                <div class="col">
+                    <button style="border-radius: 10px; margin-top: 52px;" (click)="dodajStavku()">Dodaj stavku</button>
+                </div>
+            </div>
+        </div>
+        <div class="row" style="margin-top: 20px; margin-bottom: 25px; display: flex; justify-content: center;" 
+        *ngIf="dodataStavkaPoruka!=''">
+            <p>{{dodataStavkaPoruka}}</p>
+        </div>
+    </div>
+</div>

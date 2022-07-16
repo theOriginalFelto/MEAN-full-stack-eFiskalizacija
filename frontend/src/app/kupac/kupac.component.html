@@ -1,0 +1,52 @@
+<div class="nav_part">
+    <ul class="nav_list">
+        <li class="nav_item">
+            <a class="nav_link" routerLink="/kupac">Početna</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['pregled-artikala', id]">Pregled artikala</a>
+        </li>
+        <li class="nav_item">
+            <a class="nav_link" [routerLink]="['pregled-racuna', id]">Pregled računa</a>
+        </li>
+    </ul>
+    <button class="nav_button" (click)="logout()">Izloguj se</button>
+</div>
+<div class="myContainer" style="display: flex; justify-content: center;">
+    <div class="myContainer" style="margin: 100px 0px">
+        <h2>Dobro došli, {{ime}}, na svoj profil!</h2>
+    </div>
+</div>
+<div class="container" style="margin-bottom: 50px;">
+    <div class="row">
+        <div class="col" style="margin-bottom: 30px;">
+          <h2 class="prikaz">Promjena lozinke</h2>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            Stara lozinka&nbsp; <input type="password" name="staraLozinka" [(ngModel)]="staraLozinka">
+        </div>
+        <div class="col">
+            Nova lozinka&nbsp; <input type="password" name="novaLozinka" [(ngModel)]="novaLozinka">
+        </div>
+        <div class="col">
+            Potvrdi lozinku&nbsp; <input type="password" name="potvrdaLozinke" [(ngModel)]="potvrdaLozinke">
+        </div>
+        <div class="col">
+            <button (click)="promjenaLozinkeKupac()" style="margin-top: 10px;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%); border-radius: 10px;">Promijeni lozinku</button>
+        </div>
+    </div>
+    <div *ngIf="lozinkaPoruka != ''">
+        <p>{{lozinkaPoruka}}</p>
+    </div>
+    <div *ngIf="uspjehPromjenaLozinke">
+        <p>Promjena lozinke uspješna. Uskoro Vas prebacujemo na početni ekran za prijavljivanje.</p>
+    </div>
+</div><br/>
+
+<router-outlet></router-outlet>
