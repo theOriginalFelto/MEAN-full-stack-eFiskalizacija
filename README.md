@@ -7,7 +7,7 @@ Frontend urađen u potpunosti u Angular tehnologiji, dok je bekend iskucan u Nod
 Za početak, potrebno je uraditi sljedeće (ukoliko već imate instaliran MEAN stack onda prekočite stavke 1-3):
 
 1. Instalirati NodeJS
-2. Preći u direktorijum aplikacije i u komandnoj liniji pokrenuti: 
+2. Preći u komandnoj liniji u direktorijum aplikacije i pokrenuti: 
   - `npm install @angular/cli`
   - `npm install -g express`
   - `npm install -g cors`
