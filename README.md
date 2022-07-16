@@ -42,7 +42,7 @@ Postoje dva načina za pokretanje aplikacije (drugi način je preporučen):
 
 ### Drugi način (korišćenje već postojećeg projekta) ###
   
-1. Preuzeti projekat sa: https://drive.google.com/file/d/1oFEEffgeCgG8q8JNc-4UIUpmPbkD55_V/view?usp=sharing
+1. Preuzeti prazan projekat sa: https://drive.google.com/file/d/1oFEEffgeCgG8q8JNc-4UIUpmPbkD55_V/view?usp=sharing
 
 2. Otpakovati arhivu.
 
