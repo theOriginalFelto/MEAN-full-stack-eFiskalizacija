@@ -1,0 +1,183 @@
+[{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb883"
+  },
+  "id": 2,
+  "korisnickoIme": "iskra",
+  "lozinka": "Iskra123_",
+  "ime": "Iskra",
+  "prezime": "Petrović",
+  "telefon": "0653569821",
+  "tip": "preduzece",
+  "aktivan": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb884"
+  },
+  "id": 3,
+  "korisnickoIme": "maxi",
+  "lozinka": "Maxi123_",
+  "ime": "Petar",
+  "prezime": "Karić",
+  "telefon": "0645896551",
+  "tip": "preduzece",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb885"
+  },
+  "id": 1,
+  "korisnickoIme": "gricko",
+  "lozinka": "Gricko123_",
+  "ime": "Marko",
+  "prezime": "Petrović",
+  "telefon": "0645969857",
+  "tip": "preduzece",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb886"
+  },
+  "id": 4,
+  "korisnickoIme": "superVero",
+  "lozinka": "Super123_",
+  "ime": "Lazar",
+  "prezime": "Petrić",
+  "telefon": "0640014857",
+  "tip": "preduzece",
+  "aktivan": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb887"
+  },
+  "id": 5,
+  "korisnickoIme": "zlatnaKonoba",
+  "lozinka": "Konobica123_",
+  "ime": "Miloš",
+  "prezime": "Knežević",
+  "telefon": "0645014857",
+  "tip": "preduzece",
+  "aktivan": false,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb888"
+  },
+  "id": 6,
+  "korisnickoIme": "laguna",
+  "lozinka": "Laguna123_",
+  "ime": "Nikola",
+  "prezime": "Marić",
+  "telefon": "0645864811",
+  "tip": "preduzece",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb889"
+  },
+  "id": 7,
+  "korisnickoIme": "Natica2604",
+  "lozinka": "Nata123_",
+  "ime": "Nataša",
+  "prezime": "Mitrović",
+  "telefon": "0650049821",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb88a"
+  },
+  "id": 8,
+  "korisnickoIme": "marelica",
+  "lozinka": "Mara123_",
+  "ime": "Marijana",
+  "prezime": "Rović",
+  "telefon": "0650042111",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb88b"
+  },
+  "id": 8,
+  "korisnickoIme": "mare",
+  "lozinka": "Mare123_",
+  "ime": "Marko",
+  "prezime": "Momirović",
+  "telefon": "0650077591",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb88c"
+  },
+  "id": 9,
+  "korisnickoIme": "marta",
+  "lozinka": "Marta123_",
+  "ime": "Marta",
+  "prezime": "Ković",
+  "telefon": "0650021721",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb88d"
+  },
+  "id": 10,
+  "korisnickoIme": "marinko",
+  "lozinka": "Majstor123_",
+  "ime": "Marinko",
+  "prezime": "Mitrić",
+  "telefon": "0650021121",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb88e"
+  },
+  "id": 11,
+  "korisnickoIme": "nina",
+  "lozinka": "Nina123_",
+  "ime": "Nikolina",
+  "prezime": "Savić",
+  "telefon": "0645149004",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb88f"
+  },
+  "id": 12,
+  "korisnickoIme": "sale",
+  "lozinka": "Sale123_",
+  "ime": "Aleksandar",
+  "prezime": "Kovač",
+  "telefon": "0640311829",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85cd02fa16092c1fbb890"
+  },
+  "id": 13,
+  "korisnickoIme": "ivan",
+  "lozinka": "Ivan123_",
+  "ime": "Ivan",
+  "prezime": "Bogdanovović",
+  "telefon": "0650774021",
+  "tip": "kupac",
+  "aktivan": true,
+  "__v": 0
+}]

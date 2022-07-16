@@ -1,0 +1,925 @@
+[{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8b4"
+  },
+  "idPred": 2,
+  "sifra": 1,
+  "naziv": "Brašno",
+  "jedinicaMere": "1kg",
+  "stopaPoreza": 20,
+  "proizvodjac": "Mlin \"Sunce\"",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8b5"
+  },
+  "idPred": 3,
+  "sifra": 1,
+  "naziv": "Brašno",
+  "jedinicaMere": "1kg",
+  "stopaPoreza": 20,
+  "proizvodjac": "Mlin \"Sunce\"",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8b6"
+  },
+  "idPred": 3,
+  "sifra": 2,
+  "naziv": "Šećer",
+  "jedinicaMere": "1kg",
+  "stopaPoreza": 20,
+  "proizvodjac": "Sunoko",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8b7"
+  },
+  "idPred": 2,
+  "sifra": 2,
+  "naziv": "Šećer",
+  "jedinicaMere": "1kg",
+  "stopaPoreza": 20,
+  "proizvodjac": "Sunoko",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8b8"
+  },
+  "idPred": 3,
+  "sifra": 3,
+  "naziv": "So",
+  "jedinicaMere": "1kg",
+  "stopaPoreza": 20,
+  "proizvodjac": "Solana \"Tuzla\"",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8b9"
+  },
+  "idPred": 4,
+  "sifra": 4,
+  "naziv": "Biber",
+  "jedinicaMere": "50g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Peperko",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ba"
+  },
+  "idPred": 3,
+  "sifra": 4,
+  "naziv": "Biber",
+  "jedinicaMere": "50g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Peperko",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8bb"
+  },
+  "idPred": 12,
+  "sifra": 4,
+  "naziv": "Biber",
+  "jedinicaMere": "50g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Peperko",
+  "tip": "sirovina",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8bc"
+  },
+  "idPred": 4,
+  "sifra": 5,
+  "naziv": "Chipsy",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Marbo d.o.o.",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8bd"
+  },
+  "idPred": 3,
+  "sifra": 5,
+  "naziv": "Chipsy",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Marbo d.o.o.",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8be"
+  },
+  "idPred": 2,
+  "sifra": 6,
+  "naziv": "Plazma keks",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Bambi d.o.o.",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8bf"
+  },
+  "idPred": 3,
+  "sifra": 6,
+  "naziv": "Plazma keks",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Bambi d.o.o.",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c0"
+  },
+  "idPred": 2,
+  "sifra": 7,
+  "naziv": "Eurocrem",
+  "jedinicaMere": "500g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Swisslion Takovo",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c1"
+  },
+  "idPred": 3,
+  "sifra": 7,
+  "naziv": "Eurocrem",
+  "jedinicaMere": "500g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Swisslion Takovo",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c2"
+  },
+  "idPred": 3,
+  "sifra": 8,
+  "naziv": "Euro biscuit",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Swisslion Takovo",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c3"
+  },
+  "idPred": 4,
+  "sifra": 8,
+  "naziv": "Euro biscuit",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Swisslion Takovo",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c4"
+  },
+  "idPred": 3,
+  "sifra": 9,
+  "naziv": "Coca Cola",
+  "jedinicaMere": "500ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c5"
+  },
+  "idPred": 2,
+  "sifra": 9,
+  "naziv": "Coca Cola",
+  "jedinicaMere": "500ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c6"
+  },
+  "idPred": 4,
+  "sifra": 10,
+  "naziv": "Coca Cola Zero",
+  "jedinicaMere": "500ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c7"
+  },
+  "idPred": 3,
+  "sifra": 10,
+  "naziv": "Coca Cola Zero",
+  "jedinicaMere": "500ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c8"
+  },
+  "idPred": 5,
+  "sifra": 35,
+  "naziv": "Coca Cola Zero",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": true
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8c9"
+  },
+  "idPred": 5,
+  "sifra": 11,
+  "naziv": "Fanta",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ca"
+  },
+  "idPred": 3,
+  "sifra": 19,
+  "naziv": "Fanta",
+  "jedinicaMere": "500ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8cb"
+  },
+  "idPred": 6,
+  "sifra": 11,
+  "naziv": "Fanta",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "proizvodjac": "The Coca Cola Company",
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8cc"
+  },
+  "idPred": 3,
+  "sifra": 12,
+  "naziv": "Čoko bananica",
+  "jedinicaMere": "20g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Soko Štark",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8cd"
+  },
+  "idPred": 4,
+  "sifra": 12,
+  "naziv": "Čoko bananica",
+  "jedinicaMere": "20g",
+  "stopaPoreza": 20,
+  "proizvodjac": "Soko Štark",
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ce"
+  },
+  "idPred": 2,
+  "sifra": 13,
+  "naziv": "Mints",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Chateau",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8cf"
+  },
+  "idPred": 1,
+  "sifra": 14,
+  "naziv": "Cedevita",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Cedevita",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d0"
+  },
+  "idPred": 3,
+  "sifra": 34,
+  "naziv": "Cedevita",
+  "jedinicaMere": "1000g",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Cedevita",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d1"
+  },
+  "idPred": 4,
+  "sifra": 34,
+  "naziv": "Cedevita",
+  "jedinicaMere": "1000g",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Cedevita",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d2"
+  },
+  "idPred": 5,
+  "sifra": 14,
+  "naziv": "Cedevita",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Cedevita",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d3"
+  },
+  "idPred": 1,
+  "sifra": 15,
+  "naziv": "Lepinja",
+  "jedinicaMere": "150g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Domaccini",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d4"
+  },
+  "idPred": 3,
+  "sifra": 15,
+  "naziv": "Lepinja",
+  "jedinicaMere": "150g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Domaccini",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d5"
+  },
+  "idPred": 6,
+  "sifra": 15,
+  "naziv": "Lepinja",
+  "jedinicaMere": "150g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Domaccini",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d6"
+  },
+  "idPred": 1,
+  "sifra": 16,
+  "naziv": "Pljeskavica",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Neoplanta",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d7"
+  },
+  "idPred": 3,
+  "sifra": 16,
+  "naziv": "Pljeskavica",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Neoplanta",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d8"
+  },
+  "idPred": 6,
+  "sifra": 17,
+  "naziv": "Ćevapi",
+  "jedinicaMere": "250g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Kosanović",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8d9"
+  },
+  "idPred": 1,
+  "sifra": 17,
+  "naziv": "Ćevapi",
+  "jedinicaMere": "250g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Kosanović",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8da"
+  },
+  "idPred": 1,
+  "sifra": 18,
+  "naziv": "Pileći batak",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Nedeljković",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8db"
+  },
+  "idPred": 4,
+  "sifra": 6,
+  "naziv": "Plazma keks",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Bambi",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8dc"
+  },
+  "idPred": 5,
+  "sifra": 20,
+  "naziv": "Kupinovo vino",
+  "jedinicaMere": "250ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Vinarija Ilić",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8dd"
+  },
+  "idPred": 3,
+  "sifra": 20,
+  "naziv": "Kupinovo vino",
+  "jedinicaMere": "250ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Vinarija Ilić",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8de"
+  },
+  "idPred": 6,
+  "sifra": 20,
+  "naziv": "Kupinovo vino",
+  "jedinicaMere": "250ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Vinarija Ilić",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8df"
+  },
+  "idPred": 4,
+  "sifra": 36,
+  "naziv": "Kupinovo vino",
+  "jedinicaMere": "1l",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Vinarija Ilić",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e0"
+  },
+  "idPred": 5,
+  "sifra": 21,
+  "naziv": "Sok od breskve",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Takovo",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e1"
+  },
+  "idPred": 3,
+  "sifra": 21,
+  "naziv": "Sok od breskve",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Takovo",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e2"
+  },
+  "idPred": 6,
+  "sifra": 21,
+  "naziv": "Sok od breskve",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Takovo",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e3"
+  },
+  "idPred": 3,
+  "sifra": 13,
+  "naziv": "Mints",
+  "jedinicaMere": "300g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Chateau",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e4"
+  },
+  "idPred": 1,
+  "sifra": 23,
+  "naziv": "Ledeni čaj",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Jana",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e5"
+  },
+  "idPred": 3,
+  "sifra": 23,
+  "naziv": "Ledeni čaj",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Jana",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e6"
+  },
+  "idPred": 2,
+  "sifra": 24,
+  "naziv": "Vegeta",
+  "jedinicaMere": "500g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Podravka",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e7"
+  },
+  "idPred": 3,
+  "sifra": 24,
+  "naziv": "Vegeta",
+  "jedinicaMere": "500g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Podravka",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e8"
+  },
+  "idPred": 4,
+  "sifra": 24,
+  "naziv": "Vegeta",
+  "jedinicaMere": "500g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Podravka",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8e9"
+  },
+  "idPred": 3,
+  "sifra": 25,
+  "naziv": "Cheesecake",
+  "jedinicaMere": "1000g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Eskom",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ea"
+  },
+  "idPred": 6,
+  "sifra": 25,
+  "naziv": "Cheesecake",
+  "jedinicaMere": "1000g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Eskom",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8eb"
+  },
+  "idPred": 2,
+  "sifra": 26,
+  "naziv": "Mlječna čokolada",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Milka",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ec"
+  },
+  "idPred": 3,
+  "sifra": 26,
+  "naziv": "Mlječna čokolada",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Milka",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ed"
+  },
+  "idPred": 4,
+  "sifra": 27,
+  "naziv": "Mlijeko",
+  "jedinicaMere": "1000ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Imlek",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ee"
+  },
+  "idPred": 3,
+  "sifra": 27,
+  "naziv": "Mlijeko",
+  "jedinicaMere": "1000ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Imlek",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8ef"
+  },
+  "idPred": 2,
+  "sifra": 27,
+  "naziv": "Mlijeko",
+  "jedinicaMere": "1000ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Imlek",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8f0"
+  },
+  "idPred": 2,
+  "sifra": 28,
+  "naziv": "Jogurt",
+  "jedinicaMere": "1000ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Moja kravica",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8f1"
+  },
+  "idPred": 4,
+  "sifra": 29,
+  "naziv": "Krem kajmak",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "President",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8f2"
+  },
+  "idPred": 3,
+  "sifra": 30,
+  "naziv": "Kikiriki",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Marbo",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8f3"
+  },
+  "idPred": 2,
+  "sifra": 31,
+  "naziv": "Smoki",
+  "jedinicaMere": "80g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Štark",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8f4"
+  },
+  "idPred": 4,
+  "sifra": 32,
+  "naziv": "Sirko",
+  "jedinicaMere": "100g",
+  "stopaPoreza": 20,
+  "tip": "hrana",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Imlek",
+  "dodeljenaKategorija": false
+},{
+  "_id": {
+    "$oid": "62c8785b2fa16092c1fbb8f5"
+  },
+  "idPred": 5,
+  "sifra": 33,
+  "naziv": "Sok od maline",
+  "jedinicaMere": "330ml",
+  "stopaPoreza": 20,
+  "tip": "pice",
+  "slika": "../../assets/artikli/default-product-image.jpg",
+  "__v": 0,
+  "proizvodjac": "Next",
+  "dodeljenaKategorija": false
+}]

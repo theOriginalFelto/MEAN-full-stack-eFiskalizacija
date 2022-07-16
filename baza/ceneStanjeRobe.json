@@ -1,0 +1,628 @@
+[{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb90a"
+  },
+  "sifraArtikla": 1,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 60,
+  "prodajnaCena": 80,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb90b"
+  },
+  "sifraArtikla": 1,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 70,
+  "prodajnaCena": 90,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 120,
+  "maksimalnaZeljenaKolicina": 650
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb90c"
+  },
+  "sifraArtikla": 2,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 80,
+  "prodajnaCena": 95,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 1000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb90d"
+  },
+  "sifraArtikla": 3,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 45,
+  "prodajnaCena": 55,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 600
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb90e"
+  },
+  "sifraArtikla": 4,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 15,
+  "prodajnaCena": 20,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 120,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb90f"
+  },
+  "sifraArtikla": 5,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 25,
+  "prodajnaCena": 33,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 10,
+  "maksimalnaZeljenaKolicina": 1500
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb910"
+  },
+  "sifraArtikla": 6,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 110,
+  "prodajnaCena": 135,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 700
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb911"
+  },
+  "sifraArtikla": 6,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 105,
+  "prodajnaCena": 125,
+  "tekuceStanje": 550,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 1000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb912"
+  },
+  "sifraArtikla": 6,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 95,
+  "prodajnaCena": 115,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 200,
+  "maksimalnaZeljenaKolicina": 600
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb913"
+  },
+  "sifraArtikla": 7,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 290,
+  "prodajnaCena": 335,
+  "tekuceStanje": 100,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb914"
+  },
+  "sifraArtikla": 8,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 70,
+  "prodajnaCena": 80,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 950
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb915"
+  },
+  "sifraArtikla": 9,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 45,
+  "prodajnaCena": 58,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 700
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb916"
+  },
+  "sifraArtikla": 9,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 35,
+  "prodajnaCena": 52,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 130,
+  "maksimalnaZeljenaKolicina": 600
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb917"
+  },
+  "sifraArtikla": 9,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 50,
+  "prodajnaCena": 61,
+  "tekuceStanje": 490,
+  "minimalnaZeljenaKolicina": 250,
+  "maksimalnaZeljenaKolicina": 630
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb918"
+  },
+  "sifraArtikla": 9,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 31,
+  "prodajnaCena": 42,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 1000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb919"
+  },
+  "sifraArtikla": 10,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 48,
+  "prodajnaCena": 60,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb91a"
+  },
+  "sifraArtikla": 11,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 80,
+  "prodajnaCena": 200,
+  "tekuceStanje": 520,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb91b"
+  },
+  "sifraArtikla": 12,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 15,
+  "prodajnaCena": 20,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 120,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb91c"
+  },
+  "sifraArtikla": 12,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 14,
+  "prodajnaCena": 18,
+  "tekuceStanje": 680,
+  "minimalnaZeljenaKolicina": 320,
+  "maksimalnaZeljenaKolicina": 5000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb91d"
+  },
+  "sifraArtikla": 12,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 13,
+  "prodajnaCena": 17,
+  "tekuceStanje": 590,
+  "minimalnaZeljenaKolicina": 180,
+  "maksimalnaZeljenaKolicina": 2000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb91e"
+  },
+  "sifraArtikla": 12,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 17,
+  "prodajnaCena": 22,
+  "tekuceStanje": 190,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 600
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb91f"
+  },
+  "sifraArtikla": 13,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 150,
+  "prodajnaCena": 195,
+  "tekuceStanje": 350,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 700
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb920"
+  },
+  "sifraArtikla": 14,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 30,
+  "prodajnaCena": 180,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb921"
+  },
+  "sifraArtikla": 15,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 40,
+  "prodajnaCena": 65,
+  "tekuceStanje": 320,
+  "minimalnaZeljenaKolicina": 80,
+  "maksimalnaZeljenaKolicina": 500
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb922"
+  },
+  "sifraArtikla": 15,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 43,
+  "prodajnaCena": 69,
+  "tekuceStanje": 310,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 400
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb923"
+  },
+  "sifraArtikla": 15,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 36,
+  "prodajnaCena": 59,
+  "tekuceStanje": 510,
+  "minimalnaZeljenaKolicina": 80,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb924"
+  },
+  "sifraArtikla": 15,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 31,
+  "prodajnaCena": 52,
+  "tekuceStanje": 500,
+  "minimalnaZeljenaKolicina": 120,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb925"
+  },
+  "sifraArtikla": 16,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 115,
+  "prodajnaCena": 150,
+  "tekuceStanje": 430,
+  "minimalnaZeljenaKolicina": 110,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb926"
+  },
+  "sifraArtikla": 16,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 120,
+  "prodajnaCena": 160,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 110,
+  "maksimalnaZeljenaKolicina": 910
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb927"
+  },
+  "sifraArtikla": 16,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 105,
+  "prodajnaCena": 135,
+  "tekuceStanje": 560,
+  "minimalnaZeljenaKolicina": 115,
+  "maksimalnaZeljenaKolicina": 950
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb928"
+  },
+  "sifraArtikla": 16,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 135,
+  "prodajnaCena": 172,
+  "tekuceStanje": 210,
+  "minimalnaZeljenaKolicina": 110,
+  "maksimalnaZeljenaKolicina": 500
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb929"
+  },
+  "sifraArtikla": 17,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 110,
+  "prodajnaCena": 170,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 130,
+  "maksimalnaZeljenaKolicina": 850
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb92a"
+  },
+  "sifraArtikla": 18,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 130,
+  "prodajnaCena": 195,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb92b"
+  },
+  "sifraArtikla": 20,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 140,
+  "prodajnaCena": 230,
+  "tekuceStanje": 580,
+  "minimalnaZeljenaKolicina": 120,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb92c"
+  },
+  "sifraArtikla": 21,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 103,
+  "prodajnaCena": 190,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 50,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb92d"
+  },
+  "sifraArtikla": 23,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 105,
+  "prodajnaCena": 200,
+  "tekuceStanje": 420,
+  "minimalnaZeljenaKolicina": 130,
+  "maksimalnaZeljenaKolicina": 700
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb92e"
+  },
+  "sifraArtikla": 24,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 62,
+  "prodajnaCena": 90,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb92f"
+  },
+  "sifraArtikla": 25,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 950,
+  "prodajnaCena": 1300,
+  "tekuceStanje": 250,
+  "minimalnaZeljenaKolicina": 120,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb930"
+  },
+  "sifraArtikla": 26,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 65,
+  "prodajnaCena": 80,
+  "tekuceStanje": 440,
+  "minimalnaZeljenaKolicina": 250,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb931"
+  },
+  "sifraArtikla": 26,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 55,
+  "prodajnaCena": 95,
+  "tekuceStanje": 470,
+  "minimalnaZeljenaKolicina": 260,
+  "maksimalnaZeljenaKolicina": 830
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb932"
+  },
+  "sifraArtikla": 26,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 60,
+  "prodajnaCena": 73,
+  "tekuceStanje": 440,
+  "minimalnaZeljenaKolicina": 250,
+  "maksimalnaZeljenaKolicina": 1000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb933"
+  },
+  "sifraArtikla": 26,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 68,
+  "prodajnaCena": 85,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 280,
+  "maksimalnaZeljenaKolicina": 750
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb934"
+  },
+  "sifraArtikla": 27,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 55,
+  "prodajnaCena": 75,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 850
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb935"
+  },
+  "sifraArtikla": 28,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 140,
+  "prodajnaCena": 180,
+  "tekuceStanje": 450,
+  "minimalnaZeljenaKolicina": 140,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb936"
+  },
+  "sifraArtikla": 29,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 65,
+  "prodajnaCena": 85,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 600
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb937"
+  },
+  "sifraArtikla": 29,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 75,
+  "prodajnaCena": 95,
+  "tekuceStanje": 390,
+  "minimalnaZeljenaKolicina": 180,
+  "maksimalnaZeljenaKolicina": 650
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb938"
+  },
+  "sifraArtikla": 30,
+  "nazivMagacina": "Voždovac",
+  "nabavnaCena": 46,
+  "prodajnaCena": 65,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 900
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb939"
+  },
+  "sifraArtikla": 31,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 21,
+  "prodajnaCena": 36,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 150,
+  "maksimalnaZeljenaKolicina": 800
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb93a"
+  },
+  "sifraArtikla": 32,
+  "nazivMagacina": "SKLADište",
+  "nabavnaCena": 44,
+  "prodajnaCena": 62,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 100,
+  "maksimalnaZeljenaKolicina": 850
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb93b"
+  },
+  "sifraArtikla": 29,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 62,
+  "prodajnaCena": 87,
+  "tekuceStanje": 380,
+  "minimalnaZeljenaKolicina": 180,
+  "maksimalnaZeljenaKolicina": 650
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb93c"
+  },
+  "sifraArtikla": 33,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 75,
+  "prodajnaCena": 210,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 180,
+  "maksimalnaZeljenaKolicina": 850
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb93d"
+  },
+  "sifraArtikla": 19,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 45,
+  "prodajnaCena": 59,
+  "tekuceStanje": 680,
+  "minimalnaZeljenaKolicina": 250,
+  "maksimalnaZeljenaKolicina": 1000
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb93e"
+  },
+  "sifraArtikla": 35,
+  "nazivMagacina": "Palilula",
+  "nabavnaCena": 75,
+  "prodajnaCena": 210,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 200,
+  "maksimalnaZeljenaKolicina": 950
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb93f"
+  },
+  "sifraArtikla": 35,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 55,
+  "prodajnaCena": 195,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 250,
+  "maksimalnaZeljenaKolicina": 730
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb940"
+  },
+  "sifraArtikla": 34,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 205,
+  "prodajnaCena": 299,
+  "tekuceStanje": 480,
+  "minimalnaZeljenaKolicina": 200,
+  "maksimalnaZeljenaKolicina": 850
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb941"
+  },
+  "sifraArtikla": 36,
+  "nazivMagacina": "Surčin",
+  "nabavnaCena": 365,
+  "prodajnaCena": 448,
+  "tekuceStanje": 460,
+  "minimalnaZeljenaKolicina": 200,
+  "maksimalnaZeljenaKolicina": 850
+},{
+  "_id": {
+    "$oid": "62c8929f2fa16092c1fbb942"
+  },
+  "sifraArtikla": 36,
+  "nazivMagacina": "Mladenovac",
+  "nabavnaCena": 355,
+  "prodajnaCena": 425,
+  "tekuceStanje": 460,
+  "minimalnaZeljenaKolicina": 220,
+  "maksimalnaZeljenaKolicina": 950
+}]

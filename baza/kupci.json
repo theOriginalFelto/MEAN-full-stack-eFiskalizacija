@@ -1,0 +1,57 @@
+[{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb893"
+  },
+  "id": 7,
+  "brojLicneKarte": "957145864",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb894"
+  },
+  "id": 8,
+  "brojLicneKarte": "415514632",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb895"
+  },
+  "id": 9,
+  "brojLicneKarte": "141528995",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb896"
+  },
+  "id": 10,
+  "brojLicneKarte": "137726114",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb897"
+  },
+  "id": 11,
+  "brojLicneKarte": "114529145",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb898"
+  },
+  "id": 11,
+  "brojLicneKarte": "135562349",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb899"
+  },
+  "id": 12,
+  "brojLicneKarte": "115489251",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d052fa16092c1fbb89a"
+  },
+  "id": 13,
+  "brojLicneKarte": "114792118",
+  "__v": 0
+}]

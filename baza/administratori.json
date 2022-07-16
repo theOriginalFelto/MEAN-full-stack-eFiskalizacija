@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "62c5f85f2fa16092c1fbb791"
+  },
+  "korisnickoIme": "adminMarko",
+  "lozinka": "Marko123_"
+},{
+  "_id": {
+    "$oid": "62c5f8772fa16092c1fbb792"
+  },
+  "korisnickoIme": "adminPetar",
+  "lozinka": "Petar123_"
+}]

@@ -1,0 +1,82 @@
+[{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb89d"
+  },
+  "idPred": 3,
+  "idNarucilac": 2,
+  "brojDanaZaPlacanje": 40,
+  "rabat": 20,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb89e"
+  },
+  "idPred": 3,
+  "idNarucilac": 1,
+  "brojDanaZaPlacanje": 30,
+  "rabat": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb89f"
+  },
+  "idPred": 3,
+  "idNarucilac": 4,
+  "brojDanaZaPlacanje": 50,
+  "rabat": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb8a0"
+  },
+  "idPred": 3,
+  "idNarucilac": 6,
+  "brojDanaZaPlacanje": 35,
+  "rabat": 15,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb8a1"
+  },
+  "idPred": 1,
+  "idNarucilac": 2,
+  "brojDanaZaPlacanje": 45,
+  "rabat": 20,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb8a2"
+  },
+  "idPred": 1,
+  "idNarucilac": 3,
+  "brojDanaZaPlacanje": 30,
+  "rabat": 20,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb8a3"
+  },
+  "idPred": 6,
+  "idNarucilac": 5,
+  "brojDanaZaPlacanje": 50,
+  "rabat": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb8a4"
+  },
+  "idPred": 6,
+  "idNarucilac": 1,
+  "brojDanaZaPlacanje": 30,
+  "rabat": 10,
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c85d372fa16092c1fbb8a5"
+  },
+  "idPred": 6,
+  "idNarucilac": 2,
+  "brojDanaZaPlacanje": 50,
+  "rabat": 25,
+  "__v": 0
+}]

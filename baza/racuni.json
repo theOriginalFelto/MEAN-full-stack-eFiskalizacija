@@ -1,0 +1,849 @@
+[{
+  "_id": {
+    "$oid": "62c886e9fe3bff399ea7c6f6"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1654716905584"
+    }
+  },
+  "dan": 8,
+  "mesec": 6,
+  "godina": 2022,
+  "ukupanIznos": 1139,
+  "iznosPDV": 227.8,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8bd",
+        "idPred": 3,
+        "sifra": 5,
+        "naziv": "Chipsy",
+        "jedinicaMere": "100g",
+        "stopaPoreza": 20,
+        "proizvodjac": "Marbo d.o.o.",
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb85a",
+        "sifraArtikla": 5,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 25,
+        "prodajnaCena": 33,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 10,
+        "maksimalnaZeljenaKolicina": 1500
+      },
+      "kolicina": 3
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8e1",
+        "idPred": 3,
+        "sifra": 21,
+        "naziv": "Sok od breskve",
+        "jedinicaMere": "330ml",
+        "stopaPoreza": 20,
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Takovo",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb869",
+        "sifraArtikla": 21,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 103,
+        "prodajnaCena": 190,
+        "tekuceStanje": 380,
+        "minimalnaZeljenaKolicina": 50,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 5
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8e7",
+        "idPred": 3,
+        "sifra": 24,
+        "naziv": "Vegeta",
+        "jedinicaMere": "500g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Podravka",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb86b",
+        "sifraArtikla": 24,
+        "nazivMagacina": "Mladenovac",
+        "nabavnaCena": 62,
+        "prodajnaCena": 90,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 800
+      },
+      "kolicina": 1
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Gotovina",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c88789fe3bff399ea7c721"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1652038665958"
+    }
+  },
+  "dan": 8,
+  "mesec": 5,
+  "godina": 2022,
+  "ukupanIznos": 1535,
+  "iznosPDV": 307,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8b5",
+        "idPred": 3,
+        "sifra": 1,
+        "naziv": "Brašno",
+        "jedinicaMere": "1kg",
+        "stopaPoreza": 20,
+        "proizvodjac": "Mlin \"Sunce\"",
+        "tip": "sirovina",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb856",
+        "sifraArtikla": 1,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 60,
+        "prodajnaCena": 80,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 800
+      },
+      "kolicina": 10
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8e3",
+        "idPred": 3,
+        "sifra": 13,
+        "naziv": "Mints",
+        "jedinicaMere": "300g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Chateau",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb862",
+        "sifraArtikla": 13,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 150,
+        "prodajnaCena": 195,
+        "tekuceStanje": 350,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 700
+      },
+      "kolicina": 3
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8ee",
+        "idPred": 3,
+        "sifra": 27,
+        "naziv": "Mlijeko",
+        "jedinicaMere": "1000ml",
+        "stopaPoreza": 20,
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Imlek",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb86e",
+        "sifraArtikla": 27,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 55,
+        "prodajnaCena": 75,
+        "tekuceStanje": 450,
+        "minimalnaZeljenaKolicina": 100,
+        "maksimalnaZeljenaKolicina": 850
+      },
+      "kolicina": 2
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Ček",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c8883bfe3bff399ea7c736"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657395643559"
+    }
+  },
+  "dan": 9,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 2015,
+  "iznosPDV": 403,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8ca",
+        "idPred": 3,
+        "sifra": 19,
+        "naziv": "Fanta",
+        "jedinicaMere": "500ml",
+        "stopaPoreza": 20,
+        "proizvodjac": "The Coca Cola Company",
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb875",
+        "sifraArtikla": 19,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 45,
+        "prodajnaCena": 59,
+        "tekuceStanje": 680,
+        "minimalnaZeljenaKolicina": 250,
+        "maksimalnaZeljenaKolicina": 1000
+      },
+      "kolicina": 5
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8b6",
+        "idPred": 3,
+        "sifra": 2,
+        "naziv": "Šećer",
+        "jedinicaMere": "1kg",
+        "stopaPoreza": 20,
+        "proizvodjac": "Sunoko",
+        "tip": "sirovina",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb857",
+        "sifraArtikla": 2,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 80,
+        "prodajnaCena": 95,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 1000
+      },
+      "kolicina": 2
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8dd",
+        "idPred": 3,
+        "sifra": 20,
+        "naziv": "Kupinovo vino",
+        "jedinicaMere": "250ml",
+        "stopaPoreza": 20,
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Vinarija Ilić",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb868",
+        "sifraArtikla": 20,
+        "nazivMagacina": "Voždovac",
+        "nabavnaCena": 140,
+        "prodajnaCena": 230,
+        "tekuceStanje": 580,
+        "minimalnaZeljenaKolicina": 120,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 1
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8e9",
+        "idPred": 3,
+        "sifra": 25,
+        "naziv": "Cheesecake",
+        "jedinicaMere": "1000g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Eskom",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb86c",
+        "sifraArtikla": 25,
+        "nazivMagacina": "Mladenovac",
+        "nabavnaCena": 950,
+        "prodajnaCena": 1300,
+        "tekuceStanje": 250,
+        "minimalnaZeljenaKolicina": 120,
+        "maksimalnaZeljenaKolicina": 800
+      },
+      "kolicina": 1
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Kartica",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c88880fe3bff399ea7c74d"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657050112583"
+    }
+  },
+  "dan": 5,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 1605,
+  "iznosPDV": 321,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8c2",
+        "idPred": 3,
+        "sifra": 8,
+        "naziv": "Euro biscuit",
+        "jedinicaMere": "100g",
+        "stopaPoreza": 20,
+        "proizvodjac": "Swisslion Takovo",
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb85d",
+        "sifraArtikla": 8,
+        "nazivMagacina": "SKLADište",
+        "nabavnaCena": 70,
+        "prodajnaCena": 80,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 950
+      },
+      "kolicina": 10
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8bf",
+        "idPred": 3,
+        "sifra": 6,
+        "naziv": "Plazma keks",
+        "jedinicaMere": "300g",
+        "stopaPoreza": 20,
+        "proizvodjac": "Bambi d.o.o.",
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb85b",
+        "sifraArtikla": 6,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 110,
+        "prodajnaCena": 135,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 100,
+        "maksimalnaZeljenaKolicina": 700
+      },
+      "kolicina": 3
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8ec",
+        "idPred": 3,
+        "sifra": 26,
+        "naziv": "Mlječna čokolada",
+        "jedinicaMere": "100g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Milka",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb86d",
+        "sifraArtikla": 26,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 65,
+        "prodajnaCena": 80,
+        "tekuceStanje": 440,
+        "minimalnaZeljenaKolicina": 250,
+        "maksimalnaZeljenaKolicina": 800
+      },
+      "kolicina": 5
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Gotovina",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c888cefe3bff399ea7c762"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657136590943"
+    }
+  },
+  "dan": 6,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 1483,
+  "iznosPDV": 296.6,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8d7",
+        "idPred": 3,
+        "sifra": 16,
+        "naziv": "Pljeskavica",
+        "jedinicaMere": "300g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Neoplanta",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb865",
+        "sifraArtikla": 16,
+        "nazivMagacina": "Voždovac",
+        "nabavnaCena": 115,
+        "prodajnaCena": 150,
+        "tekuceStanje": 430,
+        "minimalnaZeljenaKolicina": 110,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 3
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8d0",
+        "idPred": 3,
+        "sifra": 34,
+        "naziv": "Cedevita",
+        "jedinicaMere": "1000g",
+        "stopaPoreza": 20,
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Cedevita",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb877",
+        "sifraArtikla": 34,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 205,
+        "prodajnaCena": 299,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 200,
+        "maksimalnaZeljenaKolicina": 850
+      },
+      "kolicina": 2
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8ec",
+        "idPred": 3,
+        "sifra": 26,
+        "naziv": "Mlječna čokolada",
+        "jedinicaMere": "100g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Milka",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb86d",
+        "sifraArtikla": 26,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 65,
+        "prodajnaCena": 80,
+        "tekuceStanje": 435,
+        "minimalnaZeljenaKolicina": 250,
+        "maksimalnaZeljenaKolicina": 800
+      },
+      "kolicina": 3
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8f2",
+        "idPred": 3,
+        "sifra": 30,
+        "naziv": "Kikiriki",
+        "jedinicaMere": "100g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Marbo",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb871",
+        "sifraArtikla": 30,
+        "nazivMagacina": "Voždovac",
+        "nabavnaCena": 46,
+        "prodajnaCena": 65,
+        "tekuceStanje": 380,
+        "minimalnaZeljenaKolicina": 100,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 3
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Ček",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62c88917fe3bff399ea7c77b"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657309463639"
+    }
+  },
+  "dan": 8,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 1456,
+  "iznosPDV": 291.2,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8d7",
+        "idPred": 3,
+        "sifra": 16,
+        "naziv": "Pljeskavica",
+        "jedinicaMere": "300g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Neoplanta",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb865",
+        "sifraArtikla": 16,
+        "nazivMagacina": "Voždovac",
+        "nabavnaCena": 115,
+        "prodajnaCena": 150,
+        "tekuceStanje": 427,
+        "minimalnaZeljenaKolicina": 110,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 7
+    },
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8c4",
+        "idPred": 3,
+        "sifra": 9,
+        "naziv": "Coca Cola",
+        "jedinicaMere": "500ml",
+        "stopaPoreza": 20,
+        "proizvodjac": "The Coca Cola Company",
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": true
+      },
+      "artikalUMagacinu": {
+        "_id": "62c859f12fa16092c1fbb85e",
+        "sifraArtikla": 9,
+        "nazivMagacina": "SKLADište",
+        "nabavnaCena": 45,
+        "prodajnaCena": 58,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 700
+      },
+      "kolicina": 7
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Kartica",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cb0c27d93783265d5451d9"
+  },
+  "idPred": 3,
+  "nazivPred": "Maxi",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657474087640"
+    }
+  },
+  "dan": 10,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 210,
+  "iznosPDV": 42,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8c4",
+        "idPred": 3,
+        "sifra": 9,
+        "naziv": "Coca Cola",
+        "jedinicaMere": "500ml",
+        "stopaPoreza": 20,
+        "proizvodjac": "The Coca Cola Company",
+        "tip": "pice",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "dodeljenaKategorija": true
+      },
+      "artikalUMagacinu": {
+        "_id": "62c8929f2fa16092c1fbb918",
+        "sifraArtikla": 9,
+        "nazivMagacina": "Voždovac",
+        "nabavnaCena": 31,
+        "prodajnaCena": 42,
+        "tekuceStanje": 380,
+        "minimalnaZeljenaKolicina": 150,
+        "maksimalnaZeljenaKolicina": 1000
+      },
+      "kolicina": 5
+    }
+  ],
+  "brojLicneKarteKupca": 114529145,
+  "pibNarucioca": "",
+  "nacinPlacanja": "Gotovina",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Markovićeva",
+  "brojIzdavanja": "10",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62cffddc26beb5e58730b1c5"
+  },
+  "idPred": 1,
+  "nazivPred": "Gricko",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657798108082"
+    }
+  },
+  "dan": 14,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 118,
+  "iznosPDV": 23.6,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8d3",
+        "idPred": 1,
+        "sifra": 15,
+        "naziv": "Lepinja",
+        "jedinicaMere": "150g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Domaccini",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c8929f2fa16092c1fbb923",
+        "sifraArtikla": 15,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 36,
+        "prodajnaCena": 59,
+        "tekuceStanje": 510,
+        "minimalnaZeljenaKolicina": 80,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 2
+    }
+  ],
+  "brojLicneKarteKupca": 114792118,
+  "pibNarucioca": "",
+  "nacinPlacanja": "gotovina",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Gandijeva",
+  "brojIzdavanja": "34",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d0016326beb5e58730b221"
+  },
+  "idPred": 1,
+  "nazivPred": "Gricko",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657799011730"
+    }
+  },
+  "dan": 14,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 118,
+  "iznosPDV": 23.6,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8d3",
+        "idPred": 1,
+        "sifra": 15,
+        "naziv": "Lepinja",
+        "jedinicaMere": "150g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Domaccini",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c8929f2fa16092c1fbb923",
+        "sifraArtikla": 15,
+        "nazivMagacina": "Surčin",
+        "nabavnaCena": 36,
+        "prodajnaCena": 59,
+        "tekuceStanje": 508,
+        "minimalnaZeljenaKolicina": 80,
+        "maksimalnaZeljenaKolicina": 900
+      },
+      "kolicina": 2
+    }
+  ],
+  "brojLicneKarteKupca": 114792118,
+  "pibNarucioca": "",
+  "nacinPlacanja": "gotovina",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Gandijeva",
+  "brojIzdavanja": "34",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d0039b26beb5e58730b434"
+  },
+  "idPred": 1,
+  "nazivPred": "Gricko",
+  "datum": {
+    "$date": {
+      "$numberLong": "1657799579298"
+    }
+  },
+  "dan": 14,
+  "mesec": 7,
+  "godina": 2022,
+  "ukupanIznos": 320,
+  "iznosPDV": 64,
+  "stavke": [
+    {
+      "artikal": {
+        "_id": "62c8785b2fa16092c1fbb8d6",
+        "idPred": 1,
+        "sifra": 16,
+        "naziv": "Pljeskavica",
+        "jedinicaMere": "300g",
+        "stopaPoreza": 20,
+        "tip": "hrana",
+        "slika": "../../assets/artikli/default-product-image.jpg",
+        "__v": 0,
+        "proizvodjac": "Neoplanta",
+        "dodeljenaKategorija": false
+      },
+      "artikalUMagacinu": {
+        "_id": "62c8929f2fa16092c1fbb926",
+        "sifraArtikla": 16,
+        "nazivMagacina": "Palilula",
+        "nabavnaCena": 120,
+        "prodajnaCena": 160,
+        "tekuceStanje": 480,
+        "minimalnaZeljenaKolicina": 110,
+        "maksimalnaZeljenaKolicina": 910
+      },
+      "kolicina": 2
+    }
+  ],
+  "brojLicneKarteKupca": 114792118,
+  "pibNarucioca": "",
+  "nacinPlacanja": "cek",
+  "gradIzdavanja": "Beograd",
+  "ulicaIzdavanja": "Gandijeva",
+  "brojIzdavanja": "34",
+  "__v": 0
+}]
