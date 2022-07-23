@@ -34,7 +34,7 @@
     </div>
 </div>
 <div class="prikaz" style="margin-top: 80px;">
-    <h5>Raspored stolova za odjeljenje {{trenOdjeljenje.naziv}}</h5>
+    <h5>Raspored stolova za odjeljenje {{trenOdjeljenje?.naziv}}</h5>
 </div>
 <div class="prikaz">
     <canvas id="canvas" width="800" height="400"></canvas>
@@ -101,5 +101,6 @@
     </div>
 </form>
 <div class="prikaz">
-    <button (click)="dodajSto()" style="border-radius: 10px; margin-bottom: 30px;">Dodaj sto</button>
+    <button (click)="dodajSto()" style="border-radius: 10px; margin-bottom: 30px;" [disabled]="!tipStola || !xNoviSto || 
+    !yNoviSto">Dodaj sto</button>
 </div>

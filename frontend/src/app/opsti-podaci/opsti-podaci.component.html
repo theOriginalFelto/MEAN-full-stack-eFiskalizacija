@@ -1,7 +1,7 @@
 <div class="myContainer" style="margin-bottom: 50px;">
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Korisničko ime:</b> {{korisnik.korisnickoIme}}</p>
+            <p><b>Korisničko ime:</b> {{korisnik?.korisnickoIme}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="novoKorIme" [(ngModel)]="novoKorIme">
@@ -15,7 +15,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Ime:</b> {{korisnik.ime}}</p>
+            <p><b>Ime:</b> {{korisnik?.ime}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="novoIme" [(ngModel)]="novoIme">
@@ -26,7 +26,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Prezime:</b> {{korisnik.prezime}}</p>
+            <p><b>Prezime:</b> {{korisnik?.prezime}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="novoPrezime" [(ngModel)]="novoPrezime">
@@ -37,7 +37,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Telefon:</b> {{korisnik.telefon}}</p>
+            <p><b>Telefon:</b> {{korisnik?.telefon}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviTelefon" [(ngModel)]="noviTelefon">
@@ -49,7 +49,7 @@
     <!-- odavde ide preduzeće -->
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>E-mail:</b> {{preduzece.email}}</p>
+            <p><b>E-mail:</b> {{preduzece?.email}}</p>
         </div>
         <div class="col-3">
             <input type="email" name="noviEmail" [(ngModel)]="noviEmail">
@@ -63,7 +63,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Naziv preduzeća:</b> {{preduzece.naziv}}</p>
+            <p><b>Naziv preduzeća:</b> {{preduzece?.naziv}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviNaziv" [(ngModel)]="noviNaziv">
@@ -74,7 +74,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Država:</b> {{preduzece.drzava}}</p>
+            <p><b>Država:</b> {{preduzece?.drzava}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="novaDrzava" [(ngModel)]="novaDrzava">
@@ -85,7 +85,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Grad:</b> {{preduzece.grad}}</p>
+            <p><b>Grad:</b> {{preduzece?.grad}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviGrad" [(ngModel)]="noviGrad">
@@ -96,7 +96,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Poštanski broj:</b> {{preduzece.postanskiBroj}}</p>
+            <p><b>Poštanski broj:</b> {{preduzece?.postanskiBroj}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviPbr" [(ngModel)]="noviPbr">
@@ -107,7 +107,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Ulica:</b> {{preduzece.ulica}}</p>
+            <p><b>Ulica:</b> {{preduzece?.ulica}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="novaUlica" [(ngModel)]="novaUlica">
@@ -118,7 +118,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Broj:</b> {{preduzece.broj}}</p>
+            <p><b>Broj:</b> {{preduzece?.broj}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviBroj" [(ngModel)]="noviBroj">
@@ -129,7 +129,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>PIB:</b> {{preduzece.PIB}}</p>
+            <p><b>PIB:</b> {{preduzece?.PIB}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviPIB" [(ngModel)]="noviPIB">
@@ -143,7 +143,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Matični broj:</b> {{preduzece.maticniBroj}}</p>
+            <p><b>Matični broj:</b> {{preduzece?.maticniBroj}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviMB" [(ngModel)]="noviMB">
@@ -157,7 +157,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Kategorija:</b> {{preduzece.kategorija}}</p>
+            <p><b>Kategorija:</b> {{preduzece?.kategorija}}</p>
         </div>
         <div class="col-3 podaci">
             <input type="radio" id="prodavnica" name="novaKategorija" value="prodavnica" [(ngModel)]="novaKategorija">
@@ -171,7 +171,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Šifre djelatnosti:</b> {{preduzece.sifreDelatnosti}}</p>
+            <p><b>Šifre djelatnosti:</b> {{preduzece?.sifreDelatnosti}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noveSifreDj" [(ngModel)]="noveSifreDj">
@@ -182,7 +182,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Broj magacina:</b> {{preduzece.brojMagacina}}</p>
+            <p><b>Broj magacina:</b> {{preduzece?.brojMagacina}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviBrojMagacina" [(ngModel)]="noviBrojMagacina">
@@ -193,7 +193,7 @@
     </div>
     <div class="row red">
         <div class="col-3 podaci">
-            <p><b>Broj kasa:</b> {{preduzece.brojKasa}}</p>
+            <p><b>Broj kasa:</b> {{preduzece?.brojKasa}}</p>
         </div>
         <div class="col-3">
             <input type="text" name="noviBrojKasa" [(ngModel)]="noviBrojKasa">

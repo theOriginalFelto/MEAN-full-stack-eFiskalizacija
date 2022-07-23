@@ -13,7 +13,7 @@
                     <th>Količina</th>
                     <th>Ukupna cijena</th>
                 </tr>
-                <tr *ngFor="let st of trenRacun.stavke">
+                <tr *ngFor="let st of trenRacun?.stavke">
                     <td>{{st.artikal.naziv}}</td>
                     <td>{{st.artikalUMagacinu.prodajnaCena}} RSD</td>
                     <td>{{st.kolicina}}</td>
@@ -23,10 +23,10 @@
         </div>
         <div class="row red">
             <div class="col" style="margin-bottom: 10px;">
-                <h5>Ukupan iznos računa: {{trenRacun.ukupanIznos}}</h5>
+                <h5>Ukupan iznos računa: {{trenRacun?.ukupanIznos}}</h5>
             </div>
             <div class="col" style="margin-bottom: 10px;" *ngIf="daLiJePDV && trenRacun.iznosPDV>0">
-                <h5>Ukupan iznos PDV-a: {{trenRacun.iznosPDV}}</h5>
+                <h5>Ukupan iznos PDV-a: {{trenRacun?.iznosPDV}}</h5>
             </div>
         </div>
         <div class="row">

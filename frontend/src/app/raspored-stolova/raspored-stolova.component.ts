@@ -34,10 +34,11 @@ export class RasporedStolovaComponent implements OnInit {
   ngOnInit(): void {
     this.xNoviSto = undefined;
     this.yNoviSto = undefined;
-    this.sirinaNoviSto = undefined;
-    this.visinaNoviSto = undefined;
-    this.poluprecnikNoviSto = undefined;
+    this.sirinaNoviSto = 50;
+    this.visinaNoviSto = 50;
+    this.poluprecnikNoviSto = 30;
     if (!this.indexOdjeljenja) this.indexOdjeljenja = 0;
+    // ispražnjavanje nizova stolova kako bi se inicijalizovali korektno
     this.lokalniStolovi.forEach(element => {
       element.splice(0);
     });
@@ -53,8 +54,78 @@ export class RasporedStolovaComponent implements OnInit {
           background: "#d1e0f8"
         });
         var dragOptions = { changeZindex: true,
-          move: function() {
+          move: function() { // detekcija sudara
+            for (let ind1 = 0; ind1 < this.core.children.length; ind1++) {
+                let a = this;
+                let b = this.core.children[ind1];
+                if (a.id != b.id) { // ne može se sudariti sam sa sobom, ne provjeravamo to
+                  if (a.type === "rectangle" && b.type === "rectangle") {
+                    if (a.x - a.width/2 < b.x + b.width/2 &&
+                      a.x + a.width/2 > b.x - b.width/2 &&
+                      a.y - a.height/2 < b.y + b.height/2 &&
+                      a.y + a.height/2 > b.y - b.height/2) { // uslov za sudar dva pravougaonika
+                        // console.log("sudar")
+                        this.fill = b.fill = "red";
+                      } else {
+                        // console.log("nema sudara")
+                        this.fill = b.fill = "#2b78f3";
+                      }
+                  } else if (a.type === "arc" && b.type === "rectangle") { // kada pomjeramo krug
+                    let testX = a.x;
+                    let testY = a.y;
 
+                    // koja je ivica najbliža?
+                    if (a.x < b.x - b.width/2)        testX = b.x - b.width/2;      // lijeva ivica
+                    else if (a.x > b.x + b.width/2)   testX = b.x + b.width/2;      // desna ivica
+                    if (a.y < b.y - b.height/2)       testY = b.y - b.height/2;     // gornja ivica
+                    else if (a.y > b.y + b.height/2)  testY = b.y + b.height/2;     // donja ivica
+
+                    // udaljenost od najbliže ivice
+                    let distX = a.x - testX;
+                    let distY = a.y - testY;
+                    let distance = Math.sqrt((distX * distX) + (distY * distY));
+
+                    if (distance < a.radius) {
+                      // console.log("sudar")
+                      this.fill = b.fill = "red";
+                    } else {
+                      // console.log("nema sudara")
+                      this.fill = b.fill = "#2b78f3";
+                    }
+                  } else if (a.type === "rectangle" && b.type === "arc") { // kada pomjeramo pravougaonik
+                    let testX = b.x;
+                    let testY = b.y;
+
+                    // koja je ivica najbliža?
+                    if (b.x < a.x - a.width/2)        testX = a.x - a.width/2;      // lijeva ivica
+                    else if (b.x > a.x + a.width/2)   testX = a.x + a.width/2;      // desna ivica
+                    if (b.y < a.y - a.height/2)       testY = a.y - a.height/2;     // gornja ivica
+                    else if (b.y > a.y + a.height/2)  testY = a.y + a.height/2;     // donja ivica
+
+                    // udaljenost od najbliže ivice
+                    let distX = b.x - testX;
+                    let distY = b.y - testY;
+                    let distance = Math.sqrt((distX * distX) + (distY * distY));
+
+                    if (distance < b.radius) {
+                      // console.log("sudar")
+                      this.fill = b.fill = "red";
+                    } else {
+                      // console.log("nema sudara")
+                      this.fill = b.fill = "#2b78f3";
+                    }
+                  } else {
+                    var duzinaIzmedjuCentara = Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2));
+                    if (duzinaIzmedjuCentara < a.radius + b.radius) { // uslov za sudar dva kruga
+                      // console.log("sudar")
+                      this.fill = b.fill = "red";
+                    } else {
+                      // console.log("nema sudara")
+                      this.fill = b.fill = "#2b78f3";
+                    }
+                  }
+                }
+            }
           }
         };
         this.opcije = dragOptions;
@@ -71,8 +142,7 @@ export class RasporedStolovaComponent implements OnInit {
                   origin: { x: "center", y: "center" },
                   width: element.sirina,
                   height: element.visina,
-                  fill: "#2b78f3",
-                  stroke: "10px #2b78f3"
+                  fill: "#2b78f3"
               });
               var natpis = this.kanvas.display.text({
                   x: 0,
@@ -119,21 +189,28 @@ export class RasporedStolovaComponent implements OnInit {
 
   izaberiOdjeljenje(ind: number) {
     this.kanvas.clear();
+    // čuvanje i mijenjanje odjeljenja i stolova
     this.odjeljenja[this.indexOdjeljenja] = this.trenOdjeljenje;
+    this.lokalniStolovi[this.indexOdjeljenja] = this.trenLokalniStolovi;
     this.indexOdjeljenja = ind;
     this.trenOdjeljenje = this.odjeljenja[ind];
+    this.trenLokalniStolovi = this.lokalniStolovi[ind];
     this.ngOnInit();
   }
 
   sacuvajPoruka: string = "";
   kolizijaFlag: boolean = false;
   sacuvaj() {
+    this.kolizijaFlag = false;
+    this.trenLokalniStolovi.forEach(element => {
+      if (element.fill === "red") this.kolizijaFlag = true;
+    });
     if (this.kolizijaFlag) {
       this.sacuvajPoruka = "Nemoguće sačuvati raspored jer postoji preklapanje stolova!";
       return;
     }
     this.sacuvajPoruka = "";
-    for (let index = 0; index < this.trenOdjeljenje.stolovi.length; index++) {
+    for (let index = 0; index < this.trenOdjeljenje.stolovi.length; index++) { // kupimo nove pozicije stolova
       this.trenOdjeljenje.stolovi[index].x = this.trenLokalniStolovi[index].x;
       this.trenOdjeljenje.stolovi[index].y = this.trenLokalniStolovi[index].y;
     }
@@ -156,9 +233,9 @@ export class RasporedStolovaComponent implements OnInit {
   tipStola: string;
   xNoviSto: number;
   yNoviSto: number;
-  sirinaNoviSto: number;
-  visinaNoviSto: number;
-  poluprecnikNoviSto: number;
+  sirinaNoviSto: number = 50;
+  visinaNoviSto: number = 50;
+  poluprecnikNoviSto: number = 30;
 
   dodajSto() {
     const broj = this.trenOdjeljenje.stolovi.length + 1;
@@ -170,8 +247,7 @@ export class RasporedStolovaComponent implements OnInit {
           origin: { x: "center", y: "center" },
           width: this.sirinaNoviSto,
           height: this.visinaNoviSto,
-          fill: "#2b78f3",
-          stroke: "10px #2b78f3"
+          fill: "#2b78f3"
       });
       var natpis = this.kanvas.display.text({
           x: 0,
@@ -229,6 +305,8 @@ export class RasporedStolovaComponent implements OnInit {
       this.lokalniStolovi[this.indexOdjeljenja].push(sto);
       this.trenLokalniStolovi = this.lokalniStolovi[this.indexOdjeljenja];
     }
+    this.sirinaNoviSto = this.visinaNoviSto = 50;
+    this.poluprecnikNoviSto = 30;
   }
 
   nazivOdjeljenja: string;
