@@ -34,8 +34,8 @@ Postoje dva načina za pokretanje aplikacije (drugi način je preporučen):
 2. BACKEND
 
  - pokretanje: preći u direktorijum bekend dijela aplikacije i pokrenuti:
-	  - 'tsc' (typescript compiler)
-	  - 'npm run serve'
+	  - `tsc` (typescript compiler)
+	  - `npm run serve`
     
 3. Zamijeniti src foldere sa repozitorijuma sa odgovarajućim src folderima kreirane aplikacije, pa onda pokrenuti oba dijela.
 
@@ -54,8 +54,8 @@ Postoje dva načina za pokretanje aplikacije (drugi način je preporučen):
 
 5. BACKEND
  - pokretanje: preći u direktorijum bekend dijela aplikacije i pokrenuti:
-	  - 'tsc' (typescript compiler)
-	  - 'npm run serve'
+	  - `tsc` (typescript compiler)
+	  - `npm run serve`
     
     
     
