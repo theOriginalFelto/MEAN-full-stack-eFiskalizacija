@@ -1,0 +1,3 @@
+-dodavanje računa kod kupca
+-višestruko dodavanje artikala kategorijama (skloni artikal ili isključi dugmad)
+-paginacija: ostane stranica kad se obrišu artikli
